@@ -28,3 +28,9 @@ communication protocol and source code samples based on the STM32F407.
   (available at https://cdn.robotshop.com/media/h/hfa/rb-hfa-01/pdf/compass_q2_user_manual_1.2.pdf)
 - [Hangfa Discovery Q2 Dimensions](/doc/platform/hangfa-discovery-q2_dimensions.pdf)
   (available at http://www.hangfa.com/products/research-platform/discoveryQ2.html)
+
+## Gallery
+
+![Hangfa Discovery Q2 - Front View](hangfa-discovery-q2_original_front(1).jpg)
+
+![Hangfa Discovery Q2 - Side View](hangfa-discovery-q2_original_side.jpg)
