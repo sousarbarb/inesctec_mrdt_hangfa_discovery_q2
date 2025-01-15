@@ -1,4 +1,4 @@
-# msc-thesis
+# MSc Thesis "Navigation system for omnidirectional mobile platform"
 
 The Hangfa Discovery Q2 platforms were firstly used at
 [CRIIS - Centre for Robotics in Industry and Intelligent Systems](https://www.inesctec.pt/en/centres/criis)
