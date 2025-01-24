@@ -23,7 +23,7 @@ platform.
   _[intel dev](https://dev.intelrealsense.com/docs/intel-realsense-d400-series-product-family-datasheet)_)
 - Intel RealSense L515 (M3, 40mm distance between two screws vertical direction,
   _[intel dev](https://dev.intelrealsense.com/docs/lidar-camera-l515-datasheet)_)
-- OAK-D Lite/S2/W and OAD-D Pro and Pro W (M4, 75mm distance between
+- OAK-D and OAD-D Pro Series (M4, 75mm distance between
   two screws horizontal direction - compatibility with VESA mouting holes,
   _[depthai-hardware](https://github.com/luxonis/depthai-hardware)_)
 
