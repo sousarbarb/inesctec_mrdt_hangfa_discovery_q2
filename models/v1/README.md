@@ -14,7 +14,24 @@ platform.
 
 ## 3D Models
 
-TBC
+### Generic Support for 3D LiDARs
+
+**Requirements**
+
+- Livox Mid-360 (M3, 65x65mm, 36x48mm rectangular hole pattern,
+  _[mid-360 user manual](https://www.livoxtech.com/mid-360/downloads)_)
+- Ouster
+  |                          | Holes | Dimensions | Distance between Screws | Description | Source |
+  | ------------------------ | :---: | :--------: | :---------------------: | ----------- | :----: |
+  | OS0 Rev7 w/ Baseplate    | M8    | 110x110mm  | 80mm | square hole pattern | (_[ouster dev](https://static.ouster.dev/sensor-docs/hw_user_manual/hw_common_sections_OS0/os0-overview.html)_) |
+  | OS1 Rev7 w/ Baseplate    | M8    | 110x110mm  | 80mm | square hole pattern | (_[ouster dev](https://static.ouster.dev/sensor-docs/hw_user_manual_OS1/hw_common_sections_OS1/os1-overview.html)_) |
+  | OSDome Rev7 w/ Baseplate | M8    | 110x110mm  | 80mm | square hole pattern | (_[ouster dev](https://static.ouster.dev/sensor-docs/hw_user_manual_OSDome/hw_common_sections_OSDome/osdome-overview.html)_) |
+- RoboSense Helios Series (M3, 99.8mm diameter, 90mm diameter with a triangular hole pattern
+  _[helios series user guide](https://www.robosense.ai/en/resources-81)_)
+- Velodyne Puck Series / VLP (1/4''-20, 103mm diameter,
+  1 center screw with 2x M4 alignment features separated by 88.9mm,
+  _[velodyne puck/vlp](https://ouster.com/downloads/velodyne-downloads)_)
+
 
 ## Gallery
 
