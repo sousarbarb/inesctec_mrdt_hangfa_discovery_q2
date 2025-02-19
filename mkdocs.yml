@@ -56,7 +56,8 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
-  favicon: assets/favicon.ico
+  favicon: assets/logo/inesctec_symbol_color.png
+  logo: assets/logo/inesctec_symbol_white.png
 
 # Additional configuration
 extra:
