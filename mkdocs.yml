@@ -1,0 +1,120 @@
+# Project information
+site_name: INESC TEC MRDT Modified Hangfa Discovery Q2 Platform
+site_url: https://sousarbarb.github.io/inesctec_mrdt_hangfa_discovery_q2/
+site_author: Ricardo B. Sousa
+site_description:
+  Website containing all the documentation on electronics, mechanical designs,
+  3D-printed components, along with all the code developed within the scope of
+  the paper 'Integrating Multimodal Perception into Ground Mobile Robots'.
+  The paper is a work by Ricardo B. Sousa, Héber Miguel Sobreira,
+  João G. Martins, Paulo G. Costa, Manuel F. Silva, António Paulo Moreira,
+  submitted at the 25th IEEE International Conference on Autonomous Robot
+  Systems and Competitions (ICARSC2025).
+
+# Repository
+repo_name: sousarbarb/inesctec_mrdt_hangfa_discovery_q2
+repo_url: https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2
+
+# Copyright
+copyright:
+  Copyright &copy; 2025 Ricardo B. Sousa et al., INESC TEC
+
+# Configuration
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  favicon: assets/favicon.ico
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/INESCTEC
+      name: GitHub
+    - icon: fontawesome/brands/osi
+      link: https://oss.inesctec.pt/
+      name: INESC TEC Open Source Software
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/inesc-tec/
+      name: LinkedIn
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/inesctec/
+      name: Instagram
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@INESC_TEC
+      name: YouTube
+
+# Markdown extensions
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Page tree
+nav:
+  - About: index.md
+  - Discovery Q2: discovery-q2.md
+  - Electronics:
+    - electronics/index.md
+  - SBC:
+    - sbc/index.md
+    - LattePanda 3 Delta: sbc/lattepanda-3-delta.md
+    - LattePanda Sigma: sbc/lattepanda-sigma.md
+  - Network: network.md
+  - Sensors:
+    - sensors/index.md
+    - Inertial Measurement Units (IMUs):
+      - sensors/imu/index.md
+      - Xsens MTi-3 AHRS: sensors/imu/xsens_mti-3-ahrs.md
+      - Xsens MTi-630 AHRS: sensors/imu/xsens_mti-630-ahrs.md
+    - 2D Laser Scanners:
+      - sensors/lidar2d/index.md
+      - Hokuyo UST-10LX: sensors/lidar2d/hokuyo_ust-10lx.md
+      - LDROBOT LD19: sensors/lidar2d/ldrobot_d300_ld19.md
+      - RPLIDAR S2: sensors/lidar2d/slamtec_rplidar_s2.md
+      - YDLIDAR X4: sensors/lidar2d/ydlidar_x4.md
+    - 3D LiDARs:
+      - sensors/lidar3d/index.md
+      - Livox Mid-360: sensors/lidar3d/livox_mid-360.md
+      - Ouster OS1-64: sensors/lidar3d/ouster_os1_64.md
+      - RoboSense RS-HELIOS-5515: sensors/lidar3d/robosense_rs-helios_5515.md
+      - Velodyne VLP-16: sensors/lidar3d/velodyne_vlp-16.md
+    - RGBD Cameras:
+      - sensors/rgbd/index.md
+      - Intel RealSense D455: sensors/rgbd/intel_realsense_d455.md
+      - Intel RealSense L515: sensors/rgbd/intel_realsense_l515.md
+      - Luxonis OAK-D Pro: sensors/rgbd/luxonis_oak-d_pro.md
