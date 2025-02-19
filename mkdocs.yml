@@ -91,34 +91,34 @@ markdown_extensions:
 # Page tree
 nav:
   - About: index.md
-  - Discovery Q2: discovery-q2.md
+  - Discovery Q2: content/discovery-q2.md
   - Electronics:
-    - electronics/index.md
+    - content/electronics/index.md
   - SBC:
-    - sbc/index.md
-    - LattePanda 3 Delta: sbc/lattepanda-3-delta.md
-    - LattePanda Sigma: sbc/lattepanda-sigma.md
-  - Network: network.md
+    - content/sbc/index.md
+    - LattePanda 3 Delta: content/sbc/lattepanda-3-delta.md
+    - LattePanda Sigma: content/sbc/lattepanda-sigma.md
+  - Network: content/network.md
   - Sensors:
-    - sensors/index.md
+    - content/sensors/index.md
     - Inertial Measurement Units (IMUs):
-      - sensors/imu/index.md
-      - Xsens MTi-3 AHRS: sensors/imu/xsens_mti-3-ahrs.md
-      - Xsens MTi-630 AHRS: sensors/imu/xsens_mti-630-ahrs.md
+      - content/sensors/imu/index.md
+      - Xsens MTi-3 AHRS: content/sensors/imu/xsens_mti-3-ahrs.md
+      - Xsens MTi-630 AHRS: content/sensors/imu/xsens_mti-630-ahrs.md
     - 2D Laser Scanners:
-      - sensors/lidar2d/index.md
-      - Hokuyo UST-10LX: sensors/lidar2d/hokuyo_ust-10lx.md
-      - LDROBOT LD19: sensors/lidar2d/ldrobot_d300_ld19.md
-      - RPLIDAR S2: sensors/lidar2d/slamtec_rplidar_s2.md
-      - YDLIDAR X4: sensors/lidar2d/ydlidar_x4.md
+      - content/sensors/lidar2d/index.md
+      - Hokuyo UST-10LX: content/sensors/lidar2d/hokuyo_ust-10lx.md
+      - LDROBOT LD19: content/sensors/lidar2d/ldrobot_d300_ld19.md
+      - RPLIDAR S2: content/sensors/lidar2d/slamtec_rplidar_s2.md
+      - YDLIDAR X4: content/sensors/lidar2d/ydlidar_x4.md
     - 3D LiDARs:
-      - sensors/lidar3d/index.md
-      - Livox Mid-360: sensors/lidar3d/livox_mid-360.md
-      - Ouster OS1-64: sensors/lidar3d/ouster_os1_64.md
-      - RoboSense RS-HELIOS-5515: sensors/lidar3d/robosense_rs-helios_5515.md
-      - Velodyne VLP-16: sensors/lidar3d/velodyne_vlp-16.md
+      - content/sensors/lidar3d/index.md
+      - Livox Mid-360: content/sensors/lidar3d/livox_mid-360.md
+      - Ouster OS1-64: content/sensors/lidar3d/ouster_os1_64.md
+      - RoboSense RS-HELIOS-5515: content/sensors/lidar3d/robosense_rs-helios_5515.md
+      - Velodyne VLP-16: content/sensors/lidar3d/velodyne_vlp-16.md
     - RGBD Cameras:
-      - sensors/rgbd/index.md
-      - Intel RealSense D455: sensors/rgbd/intel_realsense_d455.md
-      - Intel RealSense L515: sensors/rgbd/intel_realsense_l515.md
-      - Luxonis OAK-D Pro: sensors/rgbd/luxonis_oak-d_pro.md
+      - content/sensors/rgbd/index.md
+      - Intel RealSense D455: content/sensors/rgbd/intel_realsense_d455.md
+      - Intel RealSense L515: content/sensors/rgbd/intel_realsense_l515.md
+      - Luxonis OAK-D Pro: content/sensors/rgbd/luxonis_oak-d_pro.md
