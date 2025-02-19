@@ -59,6 +59,9 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
+  font:
+    text: Red Hat Text
+    code: JetBrains Mono
   favicon: assets/logo/inesctec_symbol_color.png
   logo: assets/logo/inesctec_symbol_white.png
 

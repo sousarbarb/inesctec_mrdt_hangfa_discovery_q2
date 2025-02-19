@@ -73,7 +73,7 @@
 **Windows 10**
 
 1. Start Menu :fontawesome-brands-windows: :material-arrow-right:
-   Press Left Shift + Restart
+   Press **++shift++** + Restart
 2. Choose :material-tools: Troubleshoot :material-arrow-right: Advanced Options
    :material-arrow-right: UEFI Firmware Settings :material-arrow-right:
    Restart
