@@ -126,6 +126,7 @@ nav:
     - content/sbc/index.md
     - LattePanda 3 Delta: content/sbc/lattepanda-3-delta.md
     - LattePanda Sigma: content/sbc/lattepanda-sigma.md
+    - Operating System (OS): content/sbc/os.md
   - Network: content/network.md
   - Sensors:
     - content/sensors/index.md
