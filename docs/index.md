@@ -43,27 +43,23 @@ contact one of the following contributors:
 
 ## Institutions
 
-- [CRIIS - Centre for Robotics in Industry and Intelligent Systems](https://www.inesctec.pt/en/centres/criis/) from
-  [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
-- [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
+<div class="grid cards" markdown>
+
+- [![INESC TEC Logo](assets/logo/inesctec_logo_color-rgb.png)](https://www.inesctec.pt/en/)
+- [![FEUP Logo](assets/logo/feup_logo_oficial.png)](https://sigarra.up.pt/feup/en/)
+
+</div>
 
 ## Acknowledgements
 
-**5dpo Robotics Team**
+<div class="grid cards" markdown>
 
-TBC
+- **[5dpo Robotics Team](https://5dpo.github.io/)**
+- [![Amorins & Silva Logo](assets/logo/amorins-e-silva_logo.png)](https://amorinsesilva.pt/)
+- [![Hangfa Robotics Europe Logo](assets/logo/hangfa-europe_logo.png)](https://www.hangfa-europe.com/)
+- [![LattePanda Logo](assets/logo/lattepanda_logo.png)](https://www.lattepanda.com/)
 
-**Amorins & Silva**
-
-TBC
-
-**Hangfa Robotics**
-
-TBC
-
-**LattePanda**
-
-TBC
+</div>
 
 ## Funding
 
