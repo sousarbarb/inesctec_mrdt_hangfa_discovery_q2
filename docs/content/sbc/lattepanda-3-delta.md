@@ -90,7 +90,7 @@
 
 - **:material-usb-c-port: USB Type-C Power Delivery(PD)**
     - Power adapter provided in the box
-    - Powerbank Xiaomi Mi 50W 20000 mAh _(portable solution to have onboard the_
+    - Powerbank Xiaomi Mi 50W 20000mAh _(portable solution to have onboard the_
       _robot)_
 
 !!! Tip
