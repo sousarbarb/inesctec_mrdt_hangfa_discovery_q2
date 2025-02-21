@@ -127,6 +127,9 @@ nav:
     - LattePanda 3 Delta: content/sbc/lattepanda-3-delta.md
     - LattePanda Sigma: content/sbc/lattepanda-sigma.md
     - Operating System (OS): content/sbc/os.md
+    - Robot Operating System (ROS):
+      - ROS 1 Noetic: content/sbc/ros-1_noetic.md
+      - ROS 2 Foxy: content/sbc/ros-2_foxy.md
   - Network: content/network.md
   - Sensors:
     - content/sensors/index.md
