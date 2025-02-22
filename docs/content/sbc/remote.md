@@ -132,3 +132,37 @@ ssh user@<IP address>
 !!! Warning
 
     SSH 22 default port must be open in your network's firewall settings.
+
+## ZeroTier
+
+1. Execute the following commands
+    ```sh
+    curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg' | gpg --import && if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
+
+    sudo zerotier-cli info
+    ```
+2. Go to [https://my.zerotier.com/](https://my.zerotier.com/)
+   :material-arrow-right: Create A Network
+    - Enable _Auto-Assign from Range_ for the _IPv4 Auto-Assign_
+    - Enable _Broadcast_ for _Multicast_
+3. Execute the following commands
+    ```sh
+    sudo zerotier-cli join <Network ID>
+    ```
+4. Go to [https://my.zerotier.com/](https://my.zerotier.com/)
+   :material-arrow-right: Access the network previously created
+   :material-arrow-right: Authorize the new device
+5. Execute the following commands
+    ```sh
+    ifconfig  # (1)!
+    ```
+
+    1. should appear a new network interface specific to ZeroTier with an
+       auto-assigned **STATIC** IP address
+
+6. Execute remote access through VNC, SSH, or another method that allows IP
+   direct access **using the ZeroTier IP address**
+
+    !!! Warning
+
+        Both devices should be added in your private ZeroTier network
