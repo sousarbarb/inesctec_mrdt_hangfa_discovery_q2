@@ -83,3 +83,52 @@
 !!! Warning
 
     Direct IP access through RustDesk remote connection is unecrypted!
+
+## Remmina
+
+```sh
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc -y
+```
+
+### GNOME Remote Desktop (SSH)
+
+1. Execute the following commands
+    ```sh
+    sudo apt install gnome-remote-desktop -y
+    ```
+2. Open :fontawesome-solid-gear: Settings :material-arrow-right:
+   :material-share-variant-outline: Sharing :material-arrow-right: Enable
+   _Remote Login_
+3. Open an SSH remote connection
+    ```sh
+    ssh <computer name>.local
+    ```
+
+### Vino (VNC)
+
+1. Execute the following commands
+    ```sh
+    sudo apt install vino -y
+    ```
+2. Open :fontawesome-solid-gear: Settings :material-arrow-right:
+   :material-share-variant-outline: Sharing :material-arrow-right: Enable
+   _Screen Sharing_
+3. Open Remmina on the client side
+4. Open a VNC connection with the address
+   `<computer name>.local` or `<IP address>`
+
+## Secure Shell (SSH)
+
+```sh
+# SBC onboard the robot
+sudo apt install openssh-server
+
+# Remote access PC
+sudo apt install openssh-client
+
+ssh user@<IP address>
+```
+
+!!! Warning
+
+    SSH 22 default port must be open in your network's firewall settings.
