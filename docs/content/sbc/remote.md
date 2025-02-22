@@ -46,3 +46,40 @@
     Internet connection.
     More information in
     [https://support.anydesk.com/knowledge/firewall](https://support.anydesk.com/knowledge/firewall).
+
+## RustDesk
+
+1. Download RustDesk (available at
+   [https://github.com/rustdesk/rustdesk/releases/](https://github.com/rustdesk/rustdesk/releases/))
+2. Execute the following commands
+    ```sh
+    cd ~/Downloads/
+    sudo apt update
+    sudo apt install ./rustdesk-1.3.7-x86_64.deb -y
+    ```
+3. Open RustDesk
+4. Open the :material-menu: Menu :material-arrow-right:
+   :material-wrench: Settings:
+    - :material-lock: Security :material-arrow-right: :material-security: Unlock
+      Security Settings
+        - Use permanent password
+        - _(optional)_ Deny LAN discovery
+        - _(optional)_ Enable direct IP access :material-arrow-right: Define
+          the Port (e.g., `21118`)
+    - _(optional)_ :fontawesome-solid-display: Display
+        - Set _Scale adaptive_
+        - Set _Optimize reaction time_
+        - Other default options
+            - [x] Show monitors in toolbar
+            - [x] Enable file copy and paste
+            - [x] Use all my displays for the remote session
+
+!!! Tip
+
+    RustDesk is an open-source remote access software as an alternative to
+    AnyDesk and similiar applications, allowing your own self-hosted servers
+    and direct IP access to your machine.
+
+!!! Warning
+
+    Direct IP access through RustDesk remote connection is unecrypted!
