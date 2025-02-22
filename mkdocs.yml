@@ -130,6 +130,7 @@ nav:
     - Robot Operating System (ROS):
       - ROS 1 Noetic: content/sbc/ros-1_noetic.md
       - ROS 2 Foxy: content/sbc/ros-2_foxy.md
+    - Remote Access: content/sbc/remote.md
   - Network: content/network.md
   - Sensors:
     - content/sensors/index.md
