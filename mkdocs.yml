@@ -132,6 +132,7 @@ nav:
       - ROS 2 Foxy: content/sbc/ros-2_foxy.md
     - Remote Access: content/sbc/remote.md
     - Development Environment: content/sbc/dev.md
+    - Firmware Setup: content/sbc/fw.md
   - Network: content/network.md
   - Sensors:
     - content/sensors/index.md
