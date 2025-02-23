@@ -16,7 +16,7 @@ sudo apt install doxygen doxygen-doc doxygen-latex -y
    [https://code.visualstudio.com/download](https://code.visualstudio.com/download))
 2. Execute the following commands
     ```sh
-    cd ~Downloads/
+    cd ~/Downloads/
     sudo apt install ./code_1.97.2-1739406807_amd64.deb -y
     ```
 
@@ -76,3 +76,9 @@ sudo apt install doxygen doxygen-doc doxygen-latex -y
         "window.title": "${dirty}${rootName}"
     }
     ```
+
+## SSH Network Shared Folder
+
+1. Open :material-folder: File Explorer (**++super+e++**)
+2. :material-plus: Other Locations :material-arrow-right: Connect to Server
+    - Connect to Server: `ssh://user@discoveryq2/home/user/`
