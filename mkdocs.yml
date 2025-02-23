@@ -119,7 +119,7 @@ markdown_extensions:
 # Page tree
 nav:
   - About: index.md
-  - Discovery Q2: content/discovery-q2.md
+  - Platform: content/discovery-q2.md
   - Electronics:
     - content/electronics/index.md
   - SBC:
