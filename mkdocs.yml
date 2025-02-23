@@ -120,8 +120,13 @@ markdown_extensions:
 nav:
   - About: index.md
   - Platform: content/discovery-q2.md
+  - BOM: content/bom/index.md
   - Electronics:
     - content/electronics/index.md
+    - Schematic: content/electronics/schematic.md
+    - Power: content/electronics/power.md
+    - Motors: content/electronics/motors.md
+    - Assembly: content/electronics/assembly.md
   - SBC:
     - content/sbc/index.md
     - LattePanda 3 Delta: content/sbc/lattepanda-3-delta.md
