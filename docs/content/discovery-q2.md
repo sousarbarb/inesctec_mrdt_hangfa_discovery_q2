@@ -60,7 +60,7 @@ communication protocol and source code samples based on the STM32F407.
 | Motor Drivers Interfaces    | CAN, RS232                                                         |
 | Battery                     | 12V DC 10400mAh Li-ion                                             |
 | Battery Charger             | KXD-126300 Li-ion charger, 100~240VAC input, 12.6VDC @ 3.0A output |
-| DC Power Buses              | 5V @ 5A DC                                                         |
+| External User Power         | 5V @ 5A DC                                                         |
 | Electrical Protection       | 10A power fuse                                                     |
 
 ## Gallery
