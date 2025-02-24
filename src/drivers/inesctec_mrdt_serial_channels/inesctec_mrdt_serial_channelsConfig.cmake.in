@@ -1,0 +1,13 @@
+# - Config file for the inesctec_mrdt_serial_channels package
+# It defines the following variables
+#  inesctec_mrdt_serial_channels_INCLUDE_DIRS - include directories for FooBar
+#  inesctec_mrdt_serial_channels_LIBRARIES    - libraries to link against
+#  inesctec_mrdt_serial_channels_EXECUTABLE   - the bar executable
+
+set(inesctec_mrdt_serial_channels_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${inesctec_mrdt_serial_channels_DIR}/export_inesctec_mrdt_serial_channels.cmake")
+
+# These are IMPORTED targets created by inesctec_mrdt_serial_channelsTargets.cmake
+set(inesctec_mrdt_serial_channels_LIBRARIES inesctec_mrdt_serial_channels)
