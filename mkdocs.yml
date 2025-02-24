@@ -115,12 +115,16 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.pathconverter:
+      base_path: 'sousarbarb/inesctec_mrdt_hangfa_discovery_q2'
+      relative_path: ''
+      absolute: false
 
 # Page tree
 nav:
   - About: index.md
   - Platform: content/discovery-q2.md
-  - BOM: content/bom/index.md
+  - BOM: content/bom.md
   - Electronics:
     - content/electronics/index.md
     - Schematic: content/electronics/schematic.md
