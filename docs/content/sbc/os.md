@@ -137,7 +137,12 @@ ROS 2 versions.
       :material-wrench: Settings
     - Dock :material-arrow-right: :material-dots-grid: Show Applications
       :material-arrow-right: :material-wrench: Settings
-2. Keyboard Shortcuts
+2. :material-lock: Privacy :material-arrow-right: :material-lock: Screen Lock
+    - Set _Blank Screen Delay_ to _Never_
+    - Disable _Automatic Screen Lock_
+3. :material-lightning-bolt-circle: Power
+    - Set _Power Saving: Blank Screen_ to _Never_
+4. :material-keyboard: Keyboard Shortcuts
     - Home folder: **++super+e++**
 
 ### File Explorer
