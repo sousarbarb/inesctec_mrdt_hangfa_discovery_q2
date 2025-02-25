@@ -1,5 +1,11 @@
 # Remote Access
 
+!!! Tip
+
+    If you want to have a remote graphical output without having a monitor
+    connected to the SBC (AnyDesk, RustDesk, Remmina w/ VNC),
+    use the **HDMI Dummy Plug**.
+
 ## AnyDesk
 
 1. Download AnyDesk (available at
