@@ -86,28 +86,9 @@
 
 ## Remmina
 
-```sh
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc -y
-```
-
-### GNOME Remote Desktop (SSH)
-
 1. Execute the following commands
     ```sh
-    sudo apt install gnome-remote-desktop -y
-    ```
-2. Open :fontawesome-solid-gear: Settings :material-arrow-right:
-   :material-share-variant-outline: Sharing :material-arrow-right: Enable
-   _Remote Login_
-3. Open an SSH remote connection
-    ```sh
-    ssh <computer name>.local
-    ```
-
-### Vino (VNC)
-
-1. Execute the following commands
-    ```sh
+    sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc -y
     sudo apt install vino -y
     ```
 2. Open :fontawesome-solid-gear: Settings :material-arrow-right:
