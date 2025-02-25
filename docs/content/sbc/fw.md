@@ -54,8 +54,8 @@ Source:
 3. Execute the following commands
 
     ```sh
-    sudo touch /etc/udev/rules.d/00-usb-serial.rule
-    sudo tee /etc/udev/rules.d/00-usb-serial.rule <<EOF
+    sudo touch /etc/udev/rules.d/99-usb-serial.rules
+    sudo tee /etc/udev/rules.d/99-usb-serial.rules <<EOF
     # LattePanda Leonardo (ATMega32 onboard of the SBC)
     SUBSYSTEM=="tty", ATTRS{idVendor}=="3343", ATTRS{idProduct}=="803a", SYMLINK+="ttyLattePandaATMega"
 
