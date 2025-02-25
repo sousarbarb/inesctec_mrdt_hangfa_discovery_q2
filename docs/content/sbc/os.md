@@ -152,5 +152,5 @@ ROS 2 versions.
 sudo apt update
 sudo apt dist-upgrade
 
-sudo apt install build-essential git net-tools nmap terminator vim
+sudo apt install build-essential git net-tools nmap terminator vim xclip
 ```

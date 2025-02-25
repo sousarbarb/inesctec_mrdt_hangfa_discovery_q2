@@ -82,3 +82,29 @@ sudo apt install doxygen doxygen-doc doxygen-latex -y
 1. Open :material-folder: File Explorer (**++super+e++**)
 2. :material-plus: Other Locations :material-arrow-right: Connect to Server
     - Connect to Server: `ssh://user@discoveryq2/home/user/`
+
+## SSH Keys
+
+1. Execute the following commands
+    ```sh
+    ssh-keygen -t ed25519 -C "discoveryq2@inesctec.pt"
+    eval $(ssh-agent -s)
+    ssh-add .ssh/id_ed25519
+    ```
+2. Copy the contents of your public key file
+    ```sh
+    xclip -sel c < ~/.ssh/id_ed25519.pub  # (1)!
+    cat ~/.ssh/id_ed25519.pub
+    ```
+
+    1. This command may not work when access your robot through a non graphical
+       interface.
+
+3. Sign in to GitLab
+4. On the left sidebar, select your avatar
+5. Select _Edit profile_
+6. On the left sidebar, select _SSH Keys_
+7. Select _Add new key_
+
+More information in
+[https://docs.gitlab.com/user/ssh/](https://docs.gitlab.com/user/ssh/).
