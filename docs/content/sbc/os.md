@@ -128,6 +128,24 @@ ROS 2 versions.
 12. Press _Continue_ to finish the installation of the OS
 13. Reboot the Single Board Computer (SBC)
 
+## Setup
+
+### Keyboard Shortcuts
+
+1. Open Settings
+    - Task Bar :material-triangle-down: :material-arrow-right:
+      :material-wrench: Settings
+    - Dock :material-arrow-right: :material-dots-grid: Show Applications
+      :material-arrow-right: :material-wrench: Settings
+2. Keyboard Shortcuts
+    - Home folder: **++super+e++**
+
+### File Explorer
+
+1. Open :material-folder: File Explorer (**++super+e++**)
+2. Open the :material-menu: Menu :material-arrow-right: Preferences
+3. Views :material-arrow-right: Enable _List View: Allow folders to be expanded_
+
 ## Getting Started
 
 ```sh
