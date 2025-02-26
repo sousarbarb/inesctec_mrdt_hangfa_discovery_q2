@@ -38,8 +38,8 @@
 
 ### Front View
 
-![Arduino Mega Proto Shield - Front View](../../assets/electronics/electronics_arduino-mega-proto-shield_front.jpg)
+![Arduino Mega Proto Shield - Front View](../../assets/electronics/electronics_arduino-mega-proto-shield_front_annotated.jpg)
 
 ### Back View
 
-![Arduino Mega Proto Shield - Back View](../../assets/electronics/electronics_arduino-mega-proto-shield_back.jpg)
+![Arduino Mega Proto Shield - Back View](../../assets/electronics/electronics_arduino-mega-proto-shield_back_annotated.jpg)
