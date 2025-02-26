@@ -24,10 +24,14 @@ communication protocol and source code samples based on the STM32F407.
 
 ## Documents
 
-- [Hangfa Compass Q2 User Manual](../assets/platform/hangfa-compass-q2_user-manual.pdf)
-  (available at https://cdn.robotshop.com/media/h/hfa/rb-hfa-01/pdf/compass_q2_user_manual_1.2.pdf)
+- [Hangfa Discovery Q2 User Manual](../assets/platform/hangfa-discovery-q2_user-manual.pdf)
+- [Hangfa Discovery Q2 Robot Main Control Board (RHF407) User Manual](../assets/platform/hangfa-discovery-q2_rhf407-user-manual.pdf)
 - [Hangfa Discovery Q2 Dimensions](../assets/platform/hangfa-discovery-q2_dimensions.pdf)
-  (available at http://www.hangfa.com/products/research-platform/discoveryQ2.html)
+  (available at
+  [http://www.hangfa.com/products/research-platform/discoveryQ2.html](http://www.hangfa.com/products/research-platform/discoveryQ2.html))
+- [Hangfa Compass Q2 User Manual](../assets/platform/hangfa-compass-q2_user-manual.pdf)
+  (available at
+  [https://cdn.robotshop.com/media/h/hfa/rb-hfa-01/pdf/compass_q2_user_manual_1.2.pdf](https://cdn.robotshop.com/media/h/hfa/rb-hfa-01/pdf/compass_q2_user_manual_1.2.pdf))
 
 ## Characteristics
 
