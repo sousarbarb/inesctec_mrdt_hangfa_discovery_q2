@@ -76,7 +76,7 @@
 1. Connect an M.2 NVMe SSD to the M.2 Key-M socket
 2. Install a compatible M.2 wireless network card
     - Intel AX210
-    - Intel AX211 _(includes in the LattePanda Sigma 32GB bundle DFR1091)_
+    - Intel AX211 _(included in the LattePanda Sigma 32GB bundle DFR1091)_
     - Intel AX200
     - Intel AX201
     - Intel AC9560
@@ -89,6 +89,30 @@
 6. Connect the power adapter provided in the SBC's box
 7. Press the power button and the blue LED indicator will light up
     - Default OS is Windows 10 :fontawesome-brands-windows:
+
+!!! Warning
+
+    This SBC appears to not have a working wireless connection in
+    [Ubuntu 20.04.6 LTS](https://releases.ubuntu.com/focal/) due to missing
+    drivers for the Intel AX211 M.2 wireless network card.
+
+    An alternative is using a TP-Link WiFi USB, where you only have to install
+    the following drivers:
+    ```sh
+    sudo apt update
+    sudo apt dist-upgrade
+    sudo apt install linux-headers-$(uname -r) build-essential git
+
+    mkdir ~/dev/tools/ -p
+
+    cd ~/dev/tools/
+    git clone https://github.com/lwfinger/rtw88
+
+    cd rtw88
+    make
+    sudo make install
+    sudo make install_fw
+    ```
 
 ## BIOS Setup
 
