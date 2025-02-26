@@ -60,7 +60,7 @@ platforms. As a result, the website includes the following information:
 Lastly, this work is within the scope of the
 [Mobile Robotics Development Team (MRDT)](https://gitlab.inesctec.pt/mrdt/) in
 the national project
-[GreenAuto: Green innovation for the Automotive Industry](https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/). [MRDT]((https://gitlab.inesctec.pt/mrdt/)) team is a
+[GreenAuto: Green innovation for the Automotive Industry](https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/). [MRDT](https://gitlab.inesctec.pt/mrdt/) team is a
 Research & Development (R&D) team from the
 [CRIIS - Centre for Robotics in Industry and Intelligent Systems](https://www.inesctec.pt/en/centres/criis)
 at the [iiLab - Industry and Innovation Laboratory](https://www.inesctec.pt/en/laboratories/iilab-industry-and-innovation-lab).
