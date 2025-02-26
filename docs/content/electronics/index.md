@@ -20,4 +20,4 @@ platform.
 
 ## Overview
 
-TBC (block diagram?)
+![Electronics Overview](../../assets/electronics/overview.png)
