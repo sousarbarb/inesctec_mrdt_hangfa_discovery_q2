@@ -1,6 +1,69 @@
 # Integrating Multimodal Perception into Ground Mobile Robots
 
-TBC
+!!! Abstract
+
+    Multimodal perception systems enhance the robustness and adaptability
+    of autonomous mobile robots by integrating heterogeneous sensor modalities,
+    improving long-term localisation and mapping in dynamic environments and
+    human-robot interaction. Current mobile platforms often focus on specific
+    sensor configurations and prioritise cost-effectiveness, possibly limiting
+    the flexibility of the user to extend the original robots further.
+    This paper presents a methodology to integrate multimodal perception into a
+    ground mobile platform, incorporating wheel odometry, 2D laser scanners,
+    3D Light Detection and Ranging (LiDAR), and RGBD cameras.
+    The methodology describes the electronics design to power devices, firmware,
+    computation and networking architecture aspects, and mechanical mounting
+    for the sensory system based on 3D printing, laser cutting, and
+    bending metal sheet processes. Experiments demonstrate the usage of the
+    revised platform in 2D and 3D localisation and mapping and pallet pocket
+    estimation applications. All the documentation and designs are accessible
+    in a public repository.
+
+    **Keywords:**
+    Light Detection and Ranging (LiDAR),
+    mobile robot,
+    multimodal perception,
+    open-source,
+    RGBD camera.
+
+This repository contains all the documentation associated with the modifications
+made by [INESC TEC](https://www.inesctec.pt/en/) on the
+[Hangfa Discovery Q2](https://www.hangfa-europe.com/en/omni-robot/discovery)
+mobile platform in order to be compatible with multimodal perception. These
+modifications also enable the platform to be integrated in the
+[Robot Operating System (ROS)](https://ros.org/), facilitating its usage for
+research topics such as perception, localisation and mapping, multi-robot
+coordination (when more than one platform is available to the user), Artificial
+Intelligence (AI) applied on autonomous mobile robotics, among other topics.
+
+Furthermore, the main goals of this website and the respective GitHub repository
+is to help researchers interested in modifying their Hangfa mobile platforms or
+applying all the modifications that we have made to other similarly small mobile
+platforms. As a result, the website includes the following information:
+
+- **[Platform](content/discovery-q2.md):** brief presentation of the
+  [Hangfa Discovery Q2](https://www.hangfa-europe.com/en/omni-robot/discovery)
+  robot mobile platform
+- **[Bill Of Materials (BOM)](content/bom.md):** summary on the components used for
+  the modifications to the platform
+- **[Electronics](content/electronics/index.md):** presentation of the electronics redesign
+  (battery management, motor drivers, encoders reading, and external DC power
+  output for the user)
+- **[Single Board Computer (SBC)](content/sbc/index.md):** computing units
+  considered in the work and their configuration in terms of Operating System
+  (OS), Robot Operating System (ROS) setup, configuring remote access, set up
+  development environment, and configuring the firmware communication
+- **[Network](content/):** TBC
+- **[Sensors](content/):** TBC
+- ... _To Be Completed (TBC)_
+
+Lastly, this work is within the scope of the
+[Mobile Robotics Development Team (MRDT)](https://gitlab.inesctec.pt/mrdt/) in
+the national project
+[GreenAuto: Green innovation for the Automotive Industry](https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/). [MRDT]((https://gitlab.inesctec.pt/mrdt/)) team is a
+Research & Development (R&D) team from the
+[CRIIS - Centre for Robotics in Industry and Intelligent Systems](https://www.inesctec.pt/en/centres/criis)
+at the [iiLab - Industry and Innovation Laboratory](https://www.inesctec.pt/en/laboratories/iilab-industry-and-innovation-lab).
 
 ## Contacts
 
