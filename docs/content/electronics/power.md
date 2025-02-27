@@ -109,25 +109,179 @@ of the charger for more information on its configurations.
 
 ## Power Budget
 
-| Source | Voltage (V) | Current (A) | Power (W) |
-| :----- | :-------------------: | :-----------------: | :---------------: |
-| 4 x Faulhaber 2342 OEM DC motors | 12V | 4 x 1.1A | 4 x 13.2W |
-| 1 x Arduino Mega 2560 | 12V | 0.750A | 9W |
-| 1 x Brainboxes SW-005 Ethernet Switch | 5-30V | - | 1.1W |
-| 1 x Hokuyo UST-10LX | 10-30V | - | 3.6W @ 24VDC |
+In terms of power budget, the modified platform considers different sensor
+configurations in terms of compatibility. As a result, the following power
+budgets are only examples for possible configurations that you may have in your
+modified platform.
 
-**Total Power Budget handled by the LiPo Battery for 2D Autonomous Navigation:**
+### 2D Navigation (Low-cost 2D Lasers)
 
-- **Power Consumption:** 66.5W
-  _(very pessimistic estimate, specially for Arduino and the motors)_
-- **Current Consumption:** 6A @ 11.1VDC
-- **Autonomy:** >> 1h40min
+**Total Power Budget handled by the LiPo Battery**
+
+| Source                           | Voltage (V) | Current (A) | Power (W) |
+| :------------------------------- | :---------: | :---------: | :-------: |
+| 4 x Faulhaber 2342 OEM DC motors | 12V         | 4 x 1.1A    | -         |
+| 1 x Arduino Mega 2560            | 12V         | 0.750A      | -         |
+
+- **Power Consumption:** 61.8W _(estimated)_
+- **Current Consumption:** 5.6A @ 11.1VDC
+- **Autonomy:** > 1h47min
 
 !!! Note
 
     - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
+      (typically, given that robot carries a low load, should be much less than
+      1.1A continuously)
     - Arduino Mega 2560 current consumption was considered the maximum one
       supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
-    - Brainboxes SW-005 Ethernet Switch 1.1W is the maximum power drawn by it
+      (750mA)
+    - LD19 | RPLIDAR C1 | RPLIDAR S2 | YDLIDAR X4: all connect to the computing
+      unit through USB connection, and the computing unit is powered by an
+      independent power source / power bank
+
+**Total Power Budget handled by a 20000mAh 50W Power Bank for the Computing Unit**
+
+| Source                 | Voltage (V) | Current (A) | Power (W) |
+| :--------------------- | :---------: | :---------: | :-------: |
+| 1 x LattePanda 3 Delta | 15V         | 3A          | -         |
+
+- **Power Consumption:** 45W _(estimated)_
+- **Current Consumption:** 3A @ 15VDC
+- **Autonomy:** > 6h40min
+
+!!! Note
+
+    - LattePanda 3 Delta 3A is the current relative to its requirement in terms
+      of USB-C Power Delivery (PD) compliant power banks (3A @ 15VDC)
+
+### 2D Navigation (UST-10LX)
+
+**Total Power Budget handled by the LiPo Battery**
+
+| Source                                | Voltage (V) | Current (A) | Power (W)    |
+| :------------------------------------ | :---------: | :---------: | :-------:    |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
+| 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
+| 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
+
+- **Power Consumption:** 66.5W _(estimated)_
+- **Current Consumption:** 6A @ 11.1VDC
+- **Autonomy:** > 1h40min
+
+!!! Note
+
+    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
+      (typically, given that robot carries a low load, should be much less than
+      1.1A continuously)
+    - Arduino Mega 2560 current consumption was considered the maximum one
+      supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
+      (750mA)
+    - Brainboxes SW-005 Ethernet Switch 1.1W is the maximum power drawn
+    - Hokuyo UST-10LX current consumption of 0.150A (equivalent to the 3.6W @
+      24VDC) is the nominal supply current
+
+**Total Power Budget handled by a 20000mAh 50W Power Bank for the Computing Unit**
+
+| Source                 | Voltage (V) | Current (A) | Power (W) |
+| :--------------------- | :---------: | :---------: | :-------: |
+| 1 x LattePanda 3 Delta | 15V         | 3A          | -         |
+
+- **Power Consumption:** 45W _(estimated)_
+- **Current Consumption:** 3A @ 15VDC
+- **Autonomy:** > 6h40min
+
+!!! Note
+
+    - LattePanda 3 Delta 3A is the current relative to its requirement in terms
+      of USB-C Power Delivery (PD) compliant power banks (3A @ 15VDC)
+
+
+### 3D Navigation (RS-HELIOS-5515, UST-10LX)
+
+**Total Power Budget handled by the LiPo Battery**
+
+| Source                                | Voltage (V) | Current (A) | Power (W)    |
+| :------------------------------------ | :---------: | :---------: | :-------:    |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
+| 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
+| 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
+| 1 x RoboSense RS-HELIOS-5515          | 9-32V       | -           | 12W          |
+
+- **Power Consumption:** 78.5W _(estimated)_
+- **Current Consumption:** 7.1A @ 11.1VDC
+- **Autonomy:** > 1h25min
+
+!!! Note
+
+    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
+      (typically, given that robot carries a low load, should be much less than
+      1.1A continuously)
+    - Arduino Mega 2560 current consumption was considered the maximum one
+      supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
+      (750mA)
+    - Brainboxes SW-005 Ethernet Switch 1.1W is the maximum power drawn
+    - Hokuyo UST-10LX current consumption of 0.150A (equivalent to the 3.6W @
+      24VDC) is the nominal supply current
+    - RoboSense RS-HELIOS-5515 12W is the typicall power drawn by the sensor
+
+**Total Power Budget handled by a 20000mAh 50W Power Bank for the Computing Unit**
+
+| Source                 | Voltage (V) | Current (A) | Power (W) |
+| :--------------------- | :---------: | :---------: | :-------: |
+| 1 x LattePanda 3 Delta | 15V         | 3A          | -         |
+
+- **Power Consumption:** 45W _(estimated)_
+- **Current Consumption:** 3A @ 15VDC
+- **Autonomy:** > 6h40min
+
+!!! Note
+
+    - LattePanda 3 Delta 3A is the current relative to its requirement in terms
+      of USB-C Power Delivery (PD) compliant power banks (3A @ 15VDC)
+
+### 2D Navigation and RGBD Perception (UST-10LX, L515)
+
+**Total Power Budget handled by the LiPo Battery**
+
+| Source                                | Voltage (V) | Current (A) | Power (W)    |
+| :------------------------------------ | :---------: | :---------: | :-------:    |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
+| 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
+| 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
+
+- **Power Consumption:** 66.5W
+- **Current Consumption:** 6A @ 11.1VDC
+- **Autonomy:** > 1h40min
+
+!!! Note
+
+    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
+      (typically, given that robot carries a low load, should be much less than
+      1.1A continuously)
+    - Arduino Mega 2560 current consumption was considered the maximum one
+      supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
+      (750mA)
+    - Brainboxes SW-005 Ethernet Switch 1.1W is the maximum power drawn
     - Hokuyo UST-10LX current consumption of 0.150A (equivalent to the 3.6W at
       24VDC) is the nominal supply current
+
+**Total Power Budget handled by a 20000mAh 50W Power Bank for the Computing Unit**
+
+| Source                   | Voltage (V) | Current (A) | Power (W) |
+| :----------------------- | :---------: | :---------: | :-------: |
+| 1 x LattePanda 3 Delta   | 15V         | 3A          | -         |
+| 1 x Intel RealSense L515 | 5V          | -           | 3.3W      |
+
+- **Power Consumption:** 48.3W _(estimated)_
+- **Current Consumption:** 3.2A @ 15VDC
+- **Autonomy:** > 6h15min
+
+!!! Note
+
+    - LattePanda 3 Delta 3A is the current relative to its requirement in terms
+      of USB-C Power Delivery (PD) compliant power banks (3A @ 15VDC)
+    - Intel RealSense L515 3.3W is the estimated power consumption of the sensor
+      when in _Depth (XGA) + RGB (1080p, 30FPS)_ operation mode
