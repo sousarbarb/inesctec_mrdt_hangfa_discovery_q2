@@ -105,6 +105,16 @@ sudo apt install doxygen doxygen-doc doxygen-latex -y
 5. Select _Edit profile_
 6. On the left sidebar, select _SSH Keys_
 7. Select _Add new key_
+8. Verify that you can connect
+
+    ```sh
+    ssh -T git@gitlab.inesctec.pt
+    ```
 
 More information in
 [https://docs.gitlab.com/user/ssh/](https://docs.gitlab.com/user/ssh/).
+
+!!! Tip
+
+    In order to avoid setting up the `~/.ssh/config` file, you can use the same
+    SSH key for different Git servers.
