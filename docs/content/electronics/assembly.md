@@ -35,7 +35,7 @@
 **Legend**
 
 - **A:** motor drivers connectors (GND, PWM, direction)
-- **B:** encoders connectors (GND, CHA, CHB, Vcc) with 3.3kOhm pull-up resistors
+- **B:** encoders connectors (GND, CHA, CHB, Vcc) with 3.3kΩ pull-up resistors
 - **C:** Arduino Mega standard headers
 
 ### Front View
