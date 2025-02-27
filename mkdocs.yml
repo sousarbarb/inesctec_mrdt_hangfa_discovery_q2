@@ -153,7 +153,7 @@ nav:
       - content/sensors/lidar2d/index.md
       - Hokuyo UST-10LX: content/sensors/lidar2d/hokuyo_ust-10lx.md
       - LDROBOT LD19: content/sensors/lidar2d/ldrobot_d300_ld19.md
-      - RPLIDAR S2: content/sensors/lidar2d/slamtec_rplidar_s2.md
+      - SLAMTEC RPLIDAR S2: content/sensors/lidar2d/slamtec_rplidar_s2.md
       - YDLIDAR X4: content/sensors/lidar2d/ydlidar_x4.md
     - 3D LiDARs:
       - content/sensors/lidar3d/index.md
