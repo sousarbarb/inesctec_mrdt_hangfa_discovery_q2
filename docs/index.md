@@ -47,8 +47,8 @@ platforms. As a result, the website includes the following information:
 - **[Bill Of Materials (BOM)](content/bom.md):** summary on the components used for
   the modifications to the platform
 - **[Electronics](content/electronics/index.md):** presentation of the electronics redesign
-  (battery management, motor drivers, encoders reading, and external DC power
-  output for the user)
+  (battery management and power budgets, motor drivers, encoders reading, and
+  external DC power output for the user)
 - **[Single Board Computer (SBC)](content/sbc/index.md):** computing units
   considered in the work and their configuration in terms of Operating System
   (OS), Robot Operating System (ROS) setup, configuring remote access, set up
@@ -147,4 +147,26 @@ contact one of the following contributors:
 
 ## Citation
 
-TBC
+**Plain Text**
+
+R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P.
+Moreira,
+"Integrating Multimodal Perception into Ground Mobile Robots,"
+_2025 IEEE International Conference on Autonomous Robot Systems and_
+_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
+[Manuscript accepted for publication].
+
+**BibTex**
+
+```bibtex
+@INPROCEEDINGS{sousa2025icarsc,
+  author    = {Ricardo B. Sousa and Héber Miguel Sobreira and João G. Martins and Paulo G. Costa and Manuel F. Silva and António P. Moreira},
+  booktitle = {2025 IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC)},
+  title     = {Integrating Multimodal Perception into Ground Mobile Robots},
+  year      = {2025},
+  volume    = {},
+  number    = {},
+  pages     = {--},
+  doi       = {},
+  note      = {Manuscript accepted for publication},}
+```
