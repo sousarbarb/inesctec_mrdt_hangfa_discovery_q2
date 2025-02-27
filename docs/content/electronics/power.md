@@ -120,18 +120,18 @@ modified platform.
 
 | Source                           | Voltage (V) | Current (A) | Power (W) |
 | :------------------------------- | :---------: | :---------: | :-------: |
-| 4 x Faulhaber 2342 OEM DC motors | 12V         | 4 x 1.1A    | -         |
+| 4 x Faulhaber 2342 OEM DC motors | 12V         | 4 x 1.1A    | 4 x 11W   |
 | 1 x Arduino Mega 2560            | 12V         | 0.750A      | -         |
 
-- **Power Consumption:** 61.8W _(estimated)_
-- **Current Consumption:** 5.6A @ 11.1VDC
-- **Autonomy:** > 1h47min
+- **Power Consumption:** 53W _(estimated)_
+- **Current Consumption:** 4.8A @ 11.1VDC
+- **Autonomy:** > 2h05min
 
 !!! Note
 
-    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
-      (typically, given that robot carries a low load, should be much less than
-      1.1A continuously)
+    - Faulhaber 2342 OEM DC motors 1.1A and 11W are the rated current and power,
+      respectively (typically, given that robot carries a low load, should be
+      much less than 1.1A continuously)
     - Arduino Mega 2560 current consumption was considered the maximum one
       supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
       (750mA)
@@ -160,20 +160,20 @@ modified platform.
 
 | Source                                | Voltage (V) | Current (A) | Power (W)    |
 | :------------------------------------ | :---------: | :---------: | :-------:    |
-| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | 4 x 11W      |
 | 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
 | 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
 | 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
 
-- **Power Consumption:** 66.5W _(estimated)_
-- **Current Consumption:** 6A @ 11.1VDC
-- **Autonomy:** > 1h40min
+- **Power Consumption:** 57.7W _(estimated)_
+- **Current Consumption:** 5.2A @ 11.1VDC
+- **Autonomy:** > 1h55min
 
 !!! Note
 
-    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
-      (typically, given that robot carries a low load, should be much less than
-      1.1A continuously)
+    - Faulhaber 2342 OEM DC motors 1.1A and 11W are the rated current and power,
+      respectively (typically, given that robot carries a low load, should be
+      much less than 1.1A continuously)
     - Arduino Mega 2560 current consumption was considered the maximum one
       supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
       (750mA)
@@ -203,21 +203,21 @@ modified platform.
 
 | Source                                | Voltage (V) | Current (A) | Power (W)    |
 | :------------------------------------ | :---------: | :---------: | :-------:    |
-| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | 4 x 11W      |
 | 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
 | 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
 | 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
 | 1 x RoboSense RS-HELIOS-5515          | 9-32V       | -           | 12W          |
 
-- **Power Consumption:** 78.5W _(estimated)_
-- **Current Consumption:** 7.1A @ 11.1VDC
-- **Autonomy:** > 1h25min
+- **Power Consumption:** 69.7W _(estimated)_
+- **Current Consumption:** 6.3A @ 11.1VDC
+- **Autonomy:** > 1h35min
 
 !!! Note
 
-    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
-      (typically, given that robot carries a low load, should be much less than
-      1.1A continuously)
+    - Faulhaber 2342 OEM DC motors 1.1A and 11W are the rated current and power,
+      respectively (typically, given that robot carries a low load, should be
+      much less than 1.1A continuously)
     - Arduino Mega 2560 current consumption was considered the maximum one
       supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
       (750mA)
@@ -247,20 +247,20 @@ modified platform.
 
 | Source                                | Voltage (V) | Current (A) | Power (W)    |
 | :------------------------------------ | :---------: | :---------: | :-------:    |
-| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | -            |
+| 4 x Faulhaber 2342 OEM DC motors      | 12V         | 4 x 1.1A    | 4 x 11W      |
 | 1 x Arduino Mega 2560                 | 12V         | 0.750A      | -            |
 | 1 x Brainboxes SW-005 Ethernet Switch | 5-30V       | -           | 1.1W         |
 | 1 x Hokuyo UST-10LX                   | 10-30V      | -           | 3.6W @ 24VDC |
 
-- **Power Consumption:** 66.5W
-- **Current Consumption:** 6A @ 11.1VDC
-- **Autonomy:** > 1h40min
+- **Power Consumption:** 57.7W _(estimated)_
+- **Current Consumption:** 5.2A @ 11.1VDC
+- **Autonomy:** > 1h55min
 
 !!! Note
 
-    - Faulhaber 2342 OEM DC motors 1.1A is the nominal current
-      (typically, given that robot carries a low load, should be much less than
-      1.1A continuously)
+    - Faulhaber 2342 OEM DC motors 1.1A and 11W are the rated current and power,
+      respectively (typically, given that robot carries a low load, should be
+      much less than 1.1A continuously)
     - Arduino Mega 2560 current consumption was considered the maximum one
       supported by the SPX1117M3-L-5-0/TR DC Regulator for the PWRIN power input
       (750mA)
