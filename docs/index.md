@@ -65,6 +65,17 @@ Research & Development (R&D) team from the
 [CRIIS - Centre for Robotics in Industry and Intelligent Systems](https://www.inesctec.pt/en/centres/criis)
 at the [iiLab - Industry and Innovation Laboratory](https://www.inesctec.pt/en/laboratories/iilab-industry-and-innovation-lab).
 
+## Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=M_ykKm2IiWBJxEFs&amp;list=PLvp8fJUEPxYSkKsOrCN5FzjuhhSfVgSuR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- **How To Watch**
+    1. Press the :material-play: Play button
+    2. Use the :material-skip-previous: Previous and :material-skip-next: Next
+       buttons to navigate through the playlist
+- **Playlist YouTube Link:**
+  [https://youtube.com/playlist?list=PLvp8fJUEPxYSkKsOrCN5FzjuhhSfVgSuR&si=SDjPObDUzQucRvuN](https://youtube.com/playlist?list=PLvp8fJUEPxYSkKsOrCN5FzjuhhSfVgSuR&si=SDjPObDUzQucRvuN)
+
 ## Contacts
 
 If you have any questions or you want to know more about this work, please
@@ -155,6 +166,8 @@ Moreira,
 _2025 IEEE International Conference on Autonomous Robot Systems and_
 _Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
 [Manuscript accepted for publication].
+[[github]](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
+[[preprint]](http://doi.org/10.13140/RG.2.2.29381.15845/1)
 
 **BibTex**
 
