@@ -14,6 +14,7 @@ site_description:
 # Repository
 repo_name: sousarbarb/inesctec_mrdt_hangfa_discovery_q2
 repo_url: https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright:
