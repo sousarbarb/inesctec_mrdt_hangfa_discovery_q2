@@ -65,10 +65,6 @@ Source:
     EOF
     ```
 
-    !!! Warning
-
-        NOT YET CONFIRMED...
-
 
 ## CoolTerm
 
