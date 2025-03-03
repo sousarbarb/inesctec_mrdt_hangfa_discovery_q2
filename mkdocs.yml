@@ -47,9 +47,9 @@ theme:
         icon: material/link
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
+      scheme: inesctec
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
@@ -84,6 +84,9 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@INESC_TEC
       name: YouTube
+
+extra_css:
+  - stylesheets/extra.css
 
 # Markdown extensions
 markdown_extensions:
