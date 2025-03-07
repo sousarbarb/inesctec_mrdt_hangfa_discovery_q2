@@ -1,0 +1,90 @@
+Copyright (C) 2025, INESC TEC
+
+inesctec_mrdt_hangfa_discovery_q2:
+Integrating Multimodal Perception into Ground Mobile Robots.
+This framework presents a methodology to integrate multimodal perception into a
+ground mobile platform, incorporating wheel odometry, 2D laser scanners, 3D
+Light Detection and Ranging (LiDAR), and RGBD cameras.
+The methodology describes the electronics design to power devices, firmware,
+computation and networking architecture aspects, and
+mechanical mounting for the sensory system based on 3D printing, laser cutting,
+and bending metal sheet processes.
+All the documentation and designs are accessible in a public repository:
+https://gitlab.inesctec.pt/mrdt/open-source/inesctec_mrdt_hangfa_discovery_q2.
+
+This framework is authored by:
+* Ricardo B. Sousa (rbs@fe.up.pt)
+* Héber Miguel Sobreira (heber.m.sobreira@inesctec.pt)
+* João G. Martins (joao.g.martins@inesctec.pt)
+* Paulo G. Costa (paco@fe.up.pt)
+* Manuel F. Silva (mss@isep.ipp.pt)
+* António Paulo Moreira (amoreira@fe.up.pt)
+
+This framework makes use and is distributed with the following libraries:
+* Firmware:
+  * channels (https://github.com/P33a/MeArmControlVarSpeed)
+  * TimerOne (https://github.com/PaulStoffregen/TimerOne)
+  * TimerThree (https://github.com/PaulStoffregen/TimerThree)
+* Robot Operating System (ROS) Software:
+  * Boost (https://www.boost.org/)
+  * ROS 1
+    * catkin (https://wiki.ros.org/catkin)
+    * dynamic_reconfigure (https://wiki.ros.org/dynamic_reconfigure)
+    * geometry_msgs (https://index.ros.org/p/geometry_msgs/)
+    * joy (https://index.ros.org/p/joy/)
+    * message_generation (https://wiki.ros.org/message_generation)
+    * nav_msgs (https://index.ros.org/p/nav_msgs/)
+    * roscpp (https://wiki.ros.org/roscpp)
+    * sensor_msgs (https://index.ros.org/p/sensor_msgs/)
+    * tf2 (https://index.ros.org/p/tf2/)
+    * tf2_ros (https://index.ros.org/p/tf2_ros/)
+  * ROS 2
+    * ament_cmake (https://index.ros.org/p/ament_cmake/)
+    * ament_lint_auto (https://index.ros.org/p/ament_lint_auto/)
+    * builtin_interfaces (https://index.ros.org/p/builtin_interfaces/)
+    * geometry_msgs (https://index.ros.org/p/geometry_msgs/)
+    * joy (https://index.ros.org/p/joy/)
+    * nav_msgs (https://index.ros.org/p/nav_msgs/)
+    * rclcpp (https://index.ros.org/p/rclcpp/)
+    * rosidl_default_generators (https://index.ros.org/p/rosidl_default_generators/)
+    * sensor_msgs (https://index.ros.org/p/sensor_msgs/)
+    * tf2 (https://index.ros.org/p/tf2/)
+    * tf2_ros (https://index.ros.org/p/tf2_ros/)
+
+You can reach INESC TEC Technology Licensing Office (TLO) at
+info.sal@inesctec.pt, or
+Campus da Faculdade de Engenharia da Universidade do Porto
+Rua Dr. Roberto Frias
+4200-465 Porto
+Portugal
+
+If you use inesctec_mrdt_hangfa_discovery_q2 in a work that leads to a
+scientific publication, we would appreciate it if you would kindly cite 
+inesctec_mrdt_hangfa_discovery_q2 in your manuscript.
+ 
+R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P. Moreira,
+"Integrating Multimodal Perception into Ground Mobile Robots,"
+2025 IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC2025),
+Madeira, Portugal, 2025, pp. -- [Manuscript accepted for publication].
+ 
+The paper can be found at [https://doi.org/] [Manuscript accepted for publication].
+
+Licensed under the terms of MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
