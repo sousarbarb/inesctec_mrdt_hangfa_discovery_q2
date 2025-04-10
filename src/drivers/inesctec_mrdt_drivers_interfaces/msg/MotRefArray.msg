@@ -1,0 +1,3 @@
+builtin_interfaces/Time stamp
+inesctec_mrdt_drivers_interfaces/MotRef[] ang_speed_ref
+inesctec_mrdt_drivers_interfaces/MotRef[] steer_pos_ref
