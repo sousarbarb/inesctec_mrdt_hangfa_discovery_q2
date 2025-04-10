@@ -1,4 +1,4 @@
-# [5dpo_omnijoy_driver](https://github.com/5dpo/5dpo_omnijoy_driver/)
+# inesctec_mrdt_omnijoy_driver
 
 **Version 0.1.0**
 
@@ -91,7 +91,7 @@ mkdir -p ~/ros1_ws/src
 
 # Clone the repository
 cd ~/ros1_ws/src
-git clone git@github.com:5dpo/5dpo_omnijoy_driver.git
+git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
 
 # Build
 cd ~/ros1_ws
@@ -112,7 +112,7 @@ mkdir -p ~/ros2_ws/src
 
 # Clone the repository
 cd ~/ros2_ws/src
-git clone git@github.com:5dpo/5dpo_omnijoy_driver.git
+git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
 
 # Build
 cd ~/ros2_ws
@@ -134,12 +134,9 @@ roslaunch inesctec_mrdt_omnijoy_driver inesctec_mrdt_omnijoy_driver_logif710.lau
 ros2 launch inesctec_mrdt_omnijoy_driver inesctec_mrdt_omnijoy_driver_logif710.launch.xml
 ```
 
-## Acknowledges
+## Acknowledgements
 
+- [@fedetft](https://github.com/fedetft)
+- [5dpo Robotics Team](https://5dpo.github.io/)
 - [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
 - [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
-
-## Contacts
-
-If you have any questions or you want to know more about this work, please
-contact any member of the [5dpo Robotics Team](https://5dpo.github.io/).
