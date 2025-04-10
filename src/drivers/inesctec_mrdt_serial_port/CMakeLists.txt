@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(sdpo_serial_port)
+project(inesctec_mrdt_serial_port)
 
 
 
@@ -52,7 +52,6 @@ if("$ENV{ROS_VERSION}" STREQUAL "2")
   target_include_directories(${PROJECT_NAME} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
-    
   )
 
   target_link_libraries(${PROJECT_NAME} PUBLIC
@@ -60,7 +59,7 @@ if("$ENV{ROS_VERSION}" STREQUAL "2")
   )
 
   target_compile_definitions(${PROJECT_NAME} PRIVATE
-    "sdpo_serial_port_BUILDING_LIBRARY"
+    "inesctec_mrdt_serial_port_BUILDING_LIBRARY"
   )
 
 

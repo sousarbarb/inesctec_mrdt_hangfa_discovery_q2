@@ -1,4 +1,4 @@
-# [5dpo_serial_port](https://github.com/5dpo/5dpo_serial_port)
+# inesctec_mrdt_serial_port
 
 **Version 0.1.0**
 
@@ -13,6 +13,12 @@ As for the serial communication, the implementation is based on the example
 
 - Serial communication using Boost.Asio
 - Set custom baud rate
+
+**The next version will add these features:**
+
+- Other possibilities of serial port communication (e.g., synchronous,
+  low-level) based on the
+  [serial-port](https://github.com/fedetft/serial-port) GitHub repository
 
 ## ROS
 
@@ -33,54 +39,14 @@ As for the serial communication, the implementation is based on the example
 - [roscpp](https://wiki.ros.org/roscpp)
 - [Boost](https://www.boost.org/)
 
-## Usage
-
-### Compilation
-
-**ROS 1**
-
-```sh
-# ROS 1 environment setup
-source source /opt/ros/noetic/setup.bash
-
-# Create workspace
-mkdir -p ~/ros1_ws/src
-
-# Clone the repository
-cd ~/ros1_ws/src
-git clone git@github.com:5dpo/5dpo_serial_port.git
-
-# Build
-cd ~/ros1_ws
-catkin_make
-# OR catkin_make_isolated (more slow, build and check dependencies individually)
-# OR catkin build (requires the Pyhton-based catkin tools)
-source devel/setup.bash
-```
-
 **ROS 2**
 
-```sh
-# ROS 2 environment setup
-source /opt/ros/foxy/setup.bash
-
-# Create workspace
-mkdir -p ~/ros2_ws/src
-
-# Clone the repository
-cd ~/ros2_ws/src
-git clone git@github.com:5dpo/5dpo_serial_port.git
-
-# Build
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-```
+- [Boost](https://www.boost.org/)
 
 ### Example
 
 ```cpp
-#include <sdpo_ros_serial_port/AsyncSerial.h>
+#include <inesctec_mrdt_serial_port/AsyncSerial.h>
 
 const unsigned int kSerialBaudRate = 115200;
 const auto kSerialDataBits = boost::asio::serial_port_base::character_size(8);
@@ -122,13 +88,9 @@ void closeSerial() {
 }
 ```
 
-## Acknowledges
+## Acknowledgements
 
 - [@fedetft](https://github.com/fedetft)
+- [5dpo Robotics Team](https://5dpo.github.io/)
 - [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
 - [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
-
-## Contacts
-
-If you have any questions or you want to know more about this work, please
-contact any member of the [5dpo Robotics Team](https://5dpo.github.io/).

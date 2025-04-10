@@ -1,0 +1,18 @@
+# - Config file for the inesctec_mrdt_serial_port package
+# It defines the following variables
+#  inesctec_mrdt_serial_port_INCLUDE_DIRS - include directories for FooBar
+#  inesctec_mrdt_serial_port_LIBRARIES    - libraries to link against
+#  inesctec_mrdt_serial_port_EXECUTABLE   - the bar executable
+
+set(inesctec_mrdt_serial_port_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+find_package(Boost REQUIRED COMPONENTS
+  date_time
+  system
+)
+
+include("${inesctec_mrdt_serial_port_DIR}/export_inesctec_mrdt_serial_port.cmake")
+
+# These are IMPORTED targets created by inesctec_mrdt_serial_portTargets.cmake
+set(inesctec_mrdt_serial_port_LIBRARIES inesctec_mrdt_serial_port)

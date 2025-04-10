@@ -1,4 +1,4 @@
-set(PACKAGE_VERSION "@sdpo_serial_port_VERSION@")
+set(PACKAGE_VERSION "@inesctec_mrdt_serial_port_VERSION@")
 
 # Check whether the requested PACKAGE_FIND_VERSION is compatible
 if("${PACKAGE_VERSION}" VERSION_LESS "${PACKAGE_FIND_VERSION}")

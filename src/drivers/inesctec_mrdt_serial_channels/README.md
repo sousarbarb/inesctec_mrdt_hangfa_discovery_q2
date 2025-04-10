@@ -54,7 +54,8 @@ the one used on the Arduino is the same one developed by professor Paulo Costa.
 
 ## Acknowledgements
 
-- [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
+- [5dpo Robotics Team](https://5dpo.github.io/)
 - [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
+- [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
 - [Héber Miguel Sobreira](https://gitlab.inesctec.pt/heber.m.sobreira/)
 - [Paulo G. Costa](https://github.com/P33a)

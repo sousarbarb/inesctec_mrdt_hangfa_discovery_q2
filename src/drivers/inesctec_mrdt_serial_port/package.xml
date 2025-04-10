@@ -4,14 +4,11 @@
 
 <package format="3">
 
-  <name>sdpo_serial_port</name>
+  <name>inesctec_mrdt_serial_port</name>
 
   <version>0.0.0</version>
 
-  <description>
-    Library to handle serial communication. The library is based on Boost.Asio.
-  </description>
-
+  <description> Library to handle serial communication. The library is based on Boost.Asio. </description>
 
 
   <maintainer email="sousa.ricardob@outlook.com">Ricardo B. Sousa</maintainer>
@@ -28,21 +25,13 @@
   <author email="sousa.ricardob@outlook.com">Ricardo B. Sousa</author>
 
 
-
   <license>GNU General Public License version 3</license>
-
-
-
 
 
   <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
 
 
-
   <depend condition="$ROS_VERSION == 1">roscpp</depend>
-
-
-
 
 
   <export>
