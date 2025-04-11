@@ -84,18 +84,18 @@ None.
 
 ```sh
 # ROS 1 environment setup
-source source /opt/ros/noetic/setup.bash
-
-# Create workspace
-mkdir -p ~/ros1_ws/src
+source /opt/ros/noetic/setup.bash
 
 # Clone the repository
-cd ~/ros1_ws/src
 git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
 
+# ROS 1 workspace setup
+cd inesctec_mrdt_hangfa_discovery_q2/src
+catkin_init_workspace
+
 # Build
-cd ~/ros1_ws
-catkin_make
+cd ..
+catkin_make --force-cmake -DCMAKE_BUILD_TYPE=Release
 # OR catkin_make_isolated (more slow, build and check dependencies individually)
 # OR catkin build (requires the Pyhton-based catkin tools)
 source devel/setup.bash
@@ -107,16 +107,12 @@ source devel/setup.bash
 # ROS 2 environment setup
 source /opt/ros/foxy/setup.bash
 
-# Create workspace
-mkdir -p ~/ros2_ws/src
-
 # Clone the repository
-cd ~/ros2_ws/src
 git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
 
 # Build
-cd ~/ros2_ws
-colcon build
+cd inesctec_mrdt_hangfa_discovery_q2
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --event-handlers summary+ status+ console_cohesion+ console_direct+ console_start_end+ console_stderr+
 source install/setup.bash
 ```
 
