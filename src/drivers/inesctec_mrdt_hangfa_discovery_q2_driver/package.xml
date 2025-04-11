@@ -38,7 +38,7 @@
 
   <depend>inesctec_mrdt_drivers_interfaces</depend>
   <depend>inesctec_mrdt_serial_port</depend>
-  <depend>serial_communication_channels</depend>
+  <depend>inesctec_mrdt_serial_channels</depend>
 
 
   <test_depend condition="$ROS_VERSION == 2">ament_lint_auto</test_depend>

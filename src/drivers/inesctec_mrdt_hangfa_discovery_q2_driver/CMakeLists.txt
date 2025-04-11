@@ -30,7 +30,7 @@ if("$ENV{ROS_VERSION}" STREQUAL "2")
   find_package(rclcpp REQUIRED)
   find_package(inesctec_mrdt_drivers_interfaces REQUIRED)
   find_package(inesctec_mrdt_serial_port REQUIRED)
-  find_package(serial_communication_channels REQUIRED)
+  find_package(inesctec_mrdt_serial_channels REQUIRED)
 
 
 
@@ -51,7 +51,7 @@ if("$ENV{ROS_VERSION}" STREQUAL "2")
     rclcpp
     inesctec_mrdt_drivers_interfaces
     inesctec_mrdt_serial_port
-    serial_communication_channels
+    inesctec_mrdt_serial_channels
   )
 
 
@@ -103,7 +103,7 @@ elseif("$ENV{ROS_VERSION}" STREQUAL "1")
     roscpp
     inesctec_mrdt_drivers_interfaces
     inesctec_mrdt_serial_port
-    serial_communication_channels
+    inesctec_mrdt_serial_channels
   )
 
   # Catkin specific configuration
@@ -114,7 +114,7 @@ elseif("$ENV{ROS_VERSION}" STREQUAL "1")
       roscpp
       inesctec_mrdt_drivers_interfaces
       inesctec_mrdt_serial_port
-      serial_communication_channels
+      inesctec_mrdt_serial_channels
     # DEPENDS system_lib
   )
 

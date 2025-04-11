@@ -1,32 +1,34 @@
 #pragma once
 
-#include <serial_communication_channels/serial_communication_channels.h>
+#include <inesctec_mrdt_serial_channels/inesctec_mrdt_serial_channels.h>
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-typedef struct StructSerialChannelsConfig {
-  // Arduino >>> PC
-  // - encoders:
-  int32_t channel_g;
-  int32_t channel_h;
-  int32_t channel_i;
-  int32_t channel_j;
-  // - sample time of the motors
-  int32_t channel_k;
+  typedef struct StructSerialChannelsConfig
+  {
+    // Arduino >>> PC
+    // - encoders:
+    int32_t channel_g;
+    int32_t channel_h;
+    int32_t channel_i;
+    int32_t channel_j;
+    // - sample time of the motors
+    int32_t channel_k;
 
-  // PC >>> Arduino
-  // - motors angular speed reference:
-  float channel_G;
-  float channel_H;
-  float channel_I;
-  float channel_J;
-  // - PWM:
-  int32_t channel_K;
-} SerialChannelsConfig;
+    // PC >>> Arduino
+    // - motors angular speed reference:
+    float channel_G;
+    float channel_H;
+    float channel_I;
+    float channel_J;
+    // - PWM:
+    int32_t channel_K;
+  } SerialChannelsConfig;
 
-SerialChannelsConfig* InitCommunications();
+  SerialChannelsConfig *InitCommunications();
 
 #ifdef __cplusplus
 }
