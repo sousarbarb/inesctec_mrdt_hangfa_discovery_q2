@@ -1,12 +1,13 @@
-#ifndef ENCODER_H
-#define ENCODER_H
+#pragma once
 
 #include <Arduino.h>
 
 void updateEncodersState(void);
 
-class Encoder {
+class Encoder
+{
  public:
+
   uint32_t tick = 0;
   uint32_t tick_last = 0;
   volatile int16_t delta;
@@ -14,10 +15,9 @@ class Encoder {
   uint8_t state;
 
  public:
+
   void updateDelta(uint8_t &new_state);
   void updateTick(void);
 };
 
 extern Encoder *encoders;
-
-#endif

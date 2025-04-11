@@ -1,7 +1,7 @@
-# inesctec_mrdt_discoveryq2_fw
+# inesctec_mrdt_discovery_q2_fw
 
-This repository implements the firmware relative to the Hangfa Discovery Q2
-four-wheeled omnidirectional robotic platform.
+This repository implements the firmware relative to the modified
+Hangfa Discovery Q2 four-wheeled omnidirectional robotic platform.
 
 **Version 2.2.0**
 
@@ -85,7 +85,7 @@ four-wheeled omnidirectional robotic platform.
 1. Clone the repository
     ```sh
     git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
-    cd inesctec_mrdt_hangfa_discovery_q2/src/firmware/inesctec_mrdt_discoveryq2_fw
+    cd inesctec_mrdt_hangfa_discovery_q2/src/firmware/inesctec_mrdt_discovery_q2_fw
     code .
     ```
 2. Compile the project using the PlatformIO extension in VS Code
@@ -99,5 +99,6 @@ four-wheeled omnidirectional robotic platform.
 
 ## Acknowledgements
 
-- [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
+- [5dpo Robotics Team](https://5dpo.github.io/)
 - [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
+- [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
