@@ -171,3 +171,4 @@ nav:
       - Intel RealSense D455: content/sensors/rgbd/intel_realsense_d455.md
       - Intel RealSense L515: content/sensors/rgbd/intel_realsense_l515.md
       - Luxonis OAK-D Pro: content/sensors/rgbd/luxonis_oak-d_pro.md
+  - Preprint: content/preprint.md
