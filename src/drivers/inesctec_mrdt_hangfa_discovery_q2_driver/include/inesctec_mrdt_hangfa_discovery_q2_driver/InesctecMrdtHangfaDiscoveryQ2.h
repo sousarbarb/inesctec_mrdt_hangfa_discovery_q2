@@ -1,84 +1,91 @@
 #pragma once
 
-#include <iostream>
-#include <functional>
-#include <mutex>
-
 #include <inesctec_mrdt_serial_port/AsyncSerial.h>
+
+#include <functional>
+#include <iostream>
+#include <mutex>
 
 #include "inesctec_mrdt_hangfa_discovery_q2_driver/SerialChannelsConfig.h"
 
 namespace inesctec_mrdt_hangfa_discovery_q2_driver
 {
 
-  const int kMotCtrlFreq = 100;
+const int kMotCtrlFreq = 100;
 
-  struct Motor
-  {
-  public:
-    double encoder_res = 1;
-    double gear_reduction = 1;
-    int32_t enc_ticks = 0;
-    int32_t enc_ticks_prev = 0;
-    int32_t enc_ticks_delta = 0;
-    int32_t enc_ticks_delta_pub = 0;
-    double w_r = 0;
-    double w = 0;
-    double sample_time = 0;
-    double sample_time_prev = 0;
-    double sample_period = 0;
+struct Motor
+{
+ public:
 
-  public:
-    void setEncoderRes(const double &enc_res);
-    void setGearReduction(const double &gear_ratio);
+  double encoder_res = 1;
+  double gear_reduction = 1;
+  int32_t enc_ticks = 0;
+  int32_t enc_ticks_prev = 0;
+  int32_t enc_ticks_delta = 0;
+  int32_t enc_ticks_delta_pub = 0;
+  double w_r = 0;
+  double w = 0;
+  double sample_time = 0;
+  double sample_time_prev = 0;
+  double sample_period = 0;
 
-    void setEncTicksDelta(const int32_t &delta_enc_ticks);
-    void setEncTicks(const int32_t &total_enc_ticks);
-    double getEncTicksDeltaPub();
+ public:
 
-    void setWr(const double &w_ref);
+  void setEncoderRes(const double &enc_res);
+  void setGearReduction(const double &gear_ratio);
 
-    void setSampleTime(const int32_t &time_sample);
+  void setEncTicksDelta(const int32_t &delta_enc_ticks);
+  void setEncTicks(const int32_t &total_enc_ticks);
+  double getEncTicksDeltaPub();
 
-    void reset();
+  void setWr(const double &w_ref);
 
-  private:
-    void setW();
-  };
+  void setSampleTime(const int32_t &time_sample);
 
-  class InesctecMrdtHangfaDiscoveryQ2
-  {
-  public:
-    Motor mot[4];
-    std::mutex mtx_;
+  void reset();
 
-    std::function<void()> run;
+ private:
 
-  private:
-    std::string serial_port_name_;
-    SerialChannelsConfig *serial_cfg_;
-    CallbackAsyncSerial *serial_async_;
+  void setW();
+};
 
-  public:
-    InesctecMrdtHangfaDiscoveryQ2();
-    InesctecMrdtHangfaDiscoveryQ2(std::string serial_port_name);
-    ~InesctecMrdtHangfaDiscoveryQ2();
+class InesctecMrdtHangfaDiscoveryQ2
+{
+ public:
 
-    void init();
+  Motor mot[4];
+  std::mutex mtx_;
 
-    bool openSerial(const bool dbg = false);
-    void closeSerial(const bool dbg = false);
-    bool isSerialOpen();
+  std::function<void()> run;
 
-    void setSerialPortName(const std::string &serial_port_name);
+ private:
 
-    void reset();
+  std::string serial_port_name_;
+  SerialChannelsConfig *serial_cfg_;
+  CallbackAsyncSerial *serial_async_;
 
-    void stopMotors();
+ public:
 
-  private:
-    void rcvSerialData(const char *data, unsigned int len);
-    void sendSerialData();
-  };
+  InesctecMrdtHangfaDiscoveryQ2();
+  InesctecMrdtHangfaDiscoveryQ2(std::string serial_port_name);
+  ~InesctecMrdtHangfaDiscoveryQ2();
 
-} // namespace inesctec_mrdt_hangfa_discovery_q2_driver
+  void init();
+
+  bool openSerial(const bool dbg = false);
+  void closeSerial(const bool dbg = false);
+  bool isSerialOpen();
+
+  void setSerialPortName(const std::string &serial_port_name);
+
+  void reset();
+
+  void stopMotors();
+
+ private:
+
+  void rcvSerialData(const char *data, unsigned int len);
+  void sendSerialData();
+};
+
+}  // namespace inesctec_mrdt_hangfa_discovery_q2_driver
