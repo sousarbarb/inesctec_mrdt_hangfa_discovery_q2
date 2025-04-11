@@ -1,9 +1,0 @@
-<launch>
-
-  <include file="$(dirname)/../../drivers/sdpo_hangfaq2_driver/run_sdpo_hangfaq2_driver.launch"/>
-  <include file="$(dirname)/../../drivers/sdpo_omnijoy_driver/run_sdpo_omnijoy_driver_logif710.launch"/>
-  <include file="$(dirname)/../../drivers/urg_node/run_urg_node.launch"/>
-  <include file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_hokuyo_ust10lx.launch"/>
-  <include file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_base_link.launch"/>
-
-</launch>

@@ -1,0 +1,16 @@
+<launch>
+
+  <include
+    file="$(dirname)/../../drivers/inesctec_mrdt_hangfa_discovery_q2_driver/run_inesctec_mrdt_hangfa_discovery_q2_driver.launch" />
+  <include
+    file="$(dirname)/../../drivers/inesctec_mrdt_omnijoy_driver/run_inesctec_mrdt_omnijoy_driver_logif710.launch" />
+  <include file="$(dirname)/../../drivers/urg_node/run_urg_node.launch" />
+  <include file="$(dirname)/../../drivers/realsense2_camera/run_realsense2_camera_l515.launch" />
+  <include
+    file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_hokuyo_ust10lx.launch" />
+  <include
+    file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_realsense_l515.launch" />
+  <include
+    file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_base_link.launch" />
+
+</launch>

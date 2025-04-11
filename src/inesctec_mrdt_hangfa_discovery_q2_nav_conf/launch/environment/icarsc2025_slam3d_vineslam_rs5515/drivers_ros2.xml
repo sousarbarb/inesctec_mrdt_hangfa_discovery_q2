@@ -1,0 +1,14 @@
+<launch>
+
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/drivers/inesctec_mrdt_hangfa_discovery_q2_driver/run_inesctec_mrdt_hangfa_discovery_q2_driver.launch.xml" />
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/drivers/inesctec_mrdt_omnijoy_driver/run_inesctec_mrdt_omnijoy_driver_logif710.launch.xml" />
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/drivers/rslidar_sdk/run_rslidar_sdk.launch.xml" />
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/drivers/static_transform_publisher/run_static_transform_publisher_rshelios5515.launch.xml" />
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/drivers/static_transform_publisher/run_static_transform_publisher_base_link.launch.xml" />
+
+</launch>

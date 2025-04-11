@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
+
+
+  <node pkg="inesctec_mrdt_hangfa_discovery_q2_driver"
+    exec="inesctec_mrdt_hangfa_discovery_q2_driver"
+    name="inesctec_mrdt_hangfa_discovery_q2_driver"
+    namespace="$(var robot_id)">
+
+    <param name="encoder_res" value="48.0" />
+    <param name="gear_reduction" value="64.0" />
+    <param name="serial_port_name" value="/dev/ttyArduinoMega" />
+
+  </node>
+
+</launch>

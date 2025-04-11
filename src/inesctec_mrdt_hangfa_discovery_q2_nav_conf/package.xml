@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+    schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+  <name>adam_nav_conf</name>
+
+  <version>0.0.0</version>
+
+  <description> Launch files required to operate the Adam Hangfa Discovery Q2
+    (http://www.hangfa.com/EN/robot/DiscoveryQ2.html). The system implemented is based on the INESC
+    TEC Robotics Navigation Stack that it allows you to have different configurations implemented
+    and selecting just one based on your environment variables. </description>
+
+
+  <maintainer email="sousa.ricardob@outlook.com">Ricardo B. Sousa</maintainer>
+
+  <author email="heber.m.sobreira@inesctec.pt">Héber Miguel Sobreira</author>
+  <author email="sousa.ricardob@outlook.com">Ricardo B. Sousa</author>
+
+
+  <license>GNU General Public License version 3</license>
+
+
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
+
+
+  <exec_depend>inesctec_mrdt_hangfa_discovery_q2_driver</exec_depend>
+  <exec_depend>inesctec_mrdt_omnijoy_driver</exec_depend>
+  <exec_depend>inesctec_mrdt_localization_odom</exec_depend>
+
+
+  <export>
+    <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
+    <build_type condition="$ROS_VERSION == 1">catkin</build_type>
+  </export>
+
+</package>

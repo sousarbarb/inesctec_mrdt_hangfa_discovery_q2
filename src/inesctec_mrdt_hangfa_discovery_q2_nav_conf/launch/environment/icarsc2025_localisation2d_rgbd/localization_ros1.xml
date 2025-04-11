@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)" />
+  <arg name="root_directory" value="$(dirname)/../.." />
+  <arg name="demo_directory" value="$(dirname)" />
+
+  <include
+    file="$(dirname)/../../localization/inesctec_mrdt_localization_odom/run_inesctec_mrdt_localization_odom_wh.launch" />
+
+  <include file="$(arg root_directory)/localization/map_server/run_map_server.launch">
+    <arg name="ns" value="nn0" />
+    <arg name="file_name" value="$(arg demo_directory)/nn0/map.yaml" />
+  </include>
+
+  <include
+    file="$(arg root_directory)/localization/localization_perfect_match/run_localization_perfect_match.launch">
+    <arg name="scan_topic" value="scan" />
+    <arg name="ns" value="nn0" />
+    <arg name="use_pose_tf_disk_saver" value="false" />
+    <arg name="LocOffFlagInitialValue" value="false" />
+  </include>
+
+</launch>

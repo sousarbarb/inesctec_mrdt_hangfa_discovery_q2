@@ -1,0 +1,13 @@
+<launch>
+
+  <include
+    file="$(dirname)/../../drivers/inesctec_mrdt_hangfa_discovery_q2_driver/run_inesctec_mrdt_hangfa_discovery_q2_driver.launch" />
+  <include
+    file="$(dirname)/../../drivers/inesctec_mrdt_omnijoy_driver/run_inesctec_mrdt_omnijoy_driver_logif710.launch" />
+  <include file="$(dirname)/../../drivers/ouster_ros/run_ouster_ros.launch" />
+  <include
+    file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_ouster_os1.launch" />
+  <include
+    file="$(dirname)/../../drivers/static_transform_publisher/run_static_transform_publisher_base_link.launch" />
+
+</launch>

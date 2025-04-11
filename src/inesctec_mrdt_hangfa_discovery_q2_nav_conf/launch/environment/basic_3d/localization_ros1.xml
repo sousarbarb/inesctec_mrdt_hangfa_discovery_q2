@@ -1,0 +1,6 @@
+<launch>
+
+  <include
+    file="$(dirname)/../../localization/inesctec_mrdt_localization_odom/run_inesctec_mrdt_localization_odom_wh.launch" />
+
+</launch>

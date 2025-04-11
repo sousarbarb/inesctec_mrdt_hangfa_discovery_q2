@@ -1,0 +1,6 @@
+<launch>
+
+  <include
+    file="$(find-pkg-share adam_nav_conf)/launch/localization/inesctec_mrdt_localization_odom/run_inesctec_mrdt_localization_odom_wh.launch.xml" />
+
+</launch>

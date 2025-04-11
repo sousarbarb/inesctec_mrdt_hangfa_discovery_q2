@@ -1,0 +1,41 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
+
+  <arg name="publish_tf" default="True" />
+
+
+  <node pkg="inesctec_mrdt_localization_odom" exec="inesctec_mrdt_localization_odom_wh"
+    name="inesctec_mrdt_localization_odom"
+    namespace="$(var robot_id)">
+
+    <param name="base_frame_id" value="$(var robot_id)/base_footprint" />
+    <param name="odom_frame_id" value="$(var robot_id)/odom" />
+
+    <param name="publish_tf" value="$(var publish_tf)" />
+    <param name="invert_tf" value="false" />
+
+    <param name="w_ref_max_enabled" value="false" />
+    <!-- <param name="w_ref_max" value="false"/> -->
+
+
+    <param name="steering_geometry" value="omni4" />
+
+    <param name="rob_dist_between_front_back_wh" value="0.265" />
+    <param name="rob_dist_between_left_right_wh" value="0.270" />
+    <param name="wh_front_left_diam" value="0.102" />
+    <param name="wh_front_left_idx" value="3" />
+    <param name="wh_front_left_inv" value="true" />
+    <param name="wh_front_right_diam" value="0.102" />
+    <param name="wh_front_right_idx" value="2" />
+    <param name="wh_front_right_inv" value="true" />
+    <param name="wh_back_left_diam" value="0.102" />
+    <param name="wh_back_left_idx" value="1" />
+    <param name="wh_back_left_inv" value="true" />
+    <param name="wh_back_right_diam" value="0.102" />
+    <param name="wh_back_right_idx" value="0" />
+    <param name="wh_back_right_inv" value="true" />
+
+  </node>
+
+</launch>
