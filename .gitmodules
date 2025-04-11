@@ -1,0 +1,9 @@
+[submodule "src/drivers/livox_ros_driver2"]
+	path = src/drivers/livox_ros_driver2
+	url = git@github.com:sousarbarb/livox_ros_driver2.git
+[submodule "src/drivers/rslidar_sdk"]
+	path = src/drivers/rslidar_sdk
+	url = git@github.com:sousarbarb/rslidar_sdk.git
+[submodule "src/drivers/rslidar_msg"]
+	path = src/drivers/rslidar_msg
+	url = git@github.com:sousarbarb/rslidar_msg.git
