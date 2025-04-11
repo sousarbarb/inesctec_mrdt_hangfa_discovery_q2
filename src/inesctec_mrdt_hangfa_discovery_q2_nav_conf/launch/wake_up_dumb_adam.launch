@@ -1,25 +1,25 @@
 <launch>
 
-    <arg name="conf" default="$(optenv ROBOT_CONF iilab0)"/>
+    <arg name="conf" default="$(optenv ROBOT_CONF iilab0)" />
 
     <include file="$(dirname)/scripts/run_drivers.launch">
-        <arg name="robot_conf" value="$(arg conf)"/>
+        <arg name="robot_conf" value="$(arg conf)" />
     </include>
 
     <include file="$(dirname)/scripts/run_localization.launch">
-        <arg name="robot_conf" value="$(arg conf)"/>
+        <arg name="robot_conf" value="$(arg conf)" />
     </include>
 
     <include file="$(dirname)/scripts/run_navigation.launch">
-        <arg name="robot_conf" value="$(arg conf)"/>
+        <arg name="robot_conf" value="$(arg conf)" />
     </include>
 
     <include file="$(dirname)/scripts/run_slam.launch">
-        <arg name="robot_conf" value="$(arg conf)"/>
+        <arg name="robot_conf" value="$(arg conf)" />
     </include>
 
     <include file="$(dirname)/scripts/run_hmi.launch">
-        <arg name="robot_conf" value="$(arg conf)"/>
+        <arg name="robot_conf" value="$(arg conf)" />
     </include>
 
 </launch>

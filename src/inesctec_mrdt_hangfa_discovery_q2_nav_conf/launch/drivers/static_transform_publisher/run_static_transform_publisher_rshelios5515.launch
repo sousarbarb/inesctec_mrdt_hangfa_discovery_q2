@@ -1,24 +1,23 @@
 <launch>
 
-  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)" />
 
-  <arg name="invert_tf" default="False"/>
-
+  <arg name="invert_tf" default="False" />
 
 
   <group ns="$(arg robot_id)">
 
     <node pkg="tf2_ros" type="static_transform_publisher"
-        name="laser_broadcaster"
-        args="0 0 0.4777 0 0 0 $(arg robot_id)/base_link $(arg robot_id)/lidar3d"
-        output="screen"
-        unless="$(arg invert_tf)"/>
+      name="laser_broadcaster"
+      args="0 0 0.4777 0 0 0 $(arg robot_id)/base_link $(arg robot_id)/lidar3d"
+      output="screen"
+      unless="$(arg invert_tf)" />
 
     <node pkg="tf2_ros" type="static_transform_publisher"
-        name="laser_broadcaster"
-        args="0 0 -0.4777 0 0 0 $(arg robot_id)/lidar3d $(arg robot_id)/base_link"
-        output="screen"
-        if="$(arg invert_tf)"/>
+      name="laser_broadcaster"
+      args="0 0 -0.4777 0 0 0 $(arg robot_id)/lidar3d $(arg robot_id)/base_link"
+      output="screen"
+      if="$(arg invert_tf)" />
 
   </group>
 

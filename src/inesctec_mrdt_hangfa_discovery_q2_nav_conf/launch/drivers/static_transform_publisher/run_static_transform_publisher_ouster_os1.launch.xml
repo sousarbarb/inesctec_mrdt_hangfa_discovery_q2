@@ -1,12 +1,11 @@
 <launch>
 
-  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
 
-  <arg name="invert_tf" default="False"/>
+  <arg name="invert_tf" default="False" />
 
 
-
-    <!--
+  <!--
     BASE > SENSOR BOTTOM: 414,2mm
     DATASHEET (THEORIC) : 22,5mm (dissipator thickness) + 38,195mm (lidar frame)
     TOTAL               : 474,895mm
@@ -40,15 +39,15 @@
      -->
 
   <node pkg="tf2_ros" exec="static_transform_publisher"
-      name="laser_broadcaster_sensor"
-      args="0 0 0.4367 0 0 0 $(var robot_id)/base_link $(var robot_id)/os_sensor"
-      unless="$(var invert_tf)"
-      namespace="$(var robot_id)"/>
+    name="laser_broadcaster_sensor"
+    args="0 0 0.4367 0 0 0 $(var robot_id)/base_link $(var robot_id)/os_sensor"
+    unless="$(var invert_tf)"
+    namespace="$(var robot_id)" />
 
   <node pkg="tf2_ros" exec="static_transform_publisher"
-      name="laser_broadcaster_sensor"
-      args="0 0 -0.4367 0 0 0 $(var robot_id)/os_sensor $(var robot_id)/base_link"
-      if="$(var invert_tf)"
-      namespace="$(var robot_id)"/>
+    name="laser_broadcaster_sensor"
+    args="0 0 -0.4367 0 0 0 $(var robot_id)/os_sensor $(var robot_id)/base_link"
+    if="$(var invert_tf)"
+    namespace="$(var robot_id)" />
 
 </launch>

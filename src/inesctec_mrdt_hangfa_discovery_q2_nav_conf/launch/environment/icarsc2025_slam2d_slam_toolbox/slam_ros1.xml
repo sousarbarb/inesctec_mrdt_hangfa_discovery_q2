@@ -1,7 +1,7 @@
 <launch>
 
-  <include file="$(dirname)/../../slam/slam_toolbox/run_slam_toolbox.launch"/>
+  <include file="$(dirname)/../../slam/slam_toolbox/run_slam_toolbox.launch" />
 
-  <include file="$(dirname)/run_rosbag_record_icarsc2025_slam2d_gmapping.launch"/>
+  <include file="$(dirname)/run_rosbag_record_icarsc2025_slam2d_gmapping.launch" />
 
 </launch>

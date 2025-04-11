@@ -1,23 +1,25 @@
 <launch>
 
-  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+    <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
 
-  <arg name="bags_directory" default="$(env HOME)/bag_files" />
-  <!-- arg name="bags_directory" default="/media/data/bag_files" / -->
+    <arg name="bags_directory" default="$(env HOME)/bag_files" />
+    <!-- arg name="bags_directory" default="/media/data/bag_files" / -->
 
-  <arg name="include_topics"
-      default="/$(var robot_id)/motors_enc /$(var robot_id)/lidar3d"/>
-  <!-- arg name="include_topics"
+    <arg name="include_topics"
+        default="/$(var robot_id)/motors_enc /$(var robot_id)/lidar3d" />
+    <!-- arg name="include_topics"
       default="/$(var robot_id)/odom /$(var robot_id)/lidar3d"/ -->
 
-  <arg name="node_start_delay" default="0.0"/>
+    <arg name="node_start_delay" default="0.0" />
 
 
+    <executable
+        cmd="ros2 bag record --max-cache-size 1024 --polling-interval 1000 --output $(var bags_directory)/log_rosbag2_`date +%Y-%m-%d-%H-%M-%S` $(var include_topics)"
+        name="rosbag2_record" output="screen" shell="true" />
 
-  <executable cmd="ros2 bag record --max-cache-size 1024 --polling-interval 1000 --output $(var bags_directory)/log_rosbag2_`date +%Y-%m-%d-%H-%M-%S` $(var include_topics)"
-      name="rosbag2_record" output="screen" shell="true"/>
-
-  <!-- @todo see why the following command does not work well for 3D data.....  -->
-  <!-- executable cmd="ros2 bag record max-cache-size 1024 compression-mode file compression-format zstd polling-interval 1000 output $(var bags_directory)/log_rosbag2_`date +%Y-%m-%d-%H-%M-%S` $(var include_topics)" -->
+    <!-- @todo see why the following command does not work well for 3D data.....  -->
+    <!-- executable cmd="ros2 bag record max-cache-size 1024 compression-mode file
+    compression-format zstd polling-interval 1000 output $(var bags_directory)/log_rosbag2_`date
+    +%Y-%m-%d-%H-%M-%S` $(var include_topics)" -->
 
 </launch>

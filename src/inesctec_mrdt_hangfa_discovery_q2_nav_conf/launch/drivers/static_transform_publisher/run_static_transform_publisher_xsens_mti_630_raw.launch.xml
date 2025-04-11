@@ -1,19 +1,18 @@
 <launch>
 
-  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+    <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
 
-  <arg name="invert_tf" default="False"/>
+    <arg name="invert_tf" default="False" />
 
 
+    <node pkg="tf2_ros" exec="static_transform_publisher" name="tf_imu"
+        args="0 0 0.19996 0 0 0 $(var robot_id)/base_link $(var robot_id)/imu_link"
+        unless="$(var invert_tf)"
+        namespace="$(var robot_id)" />
 
-  <node pkg="tf2_ros" exec="static_transform_publisher" name="tf_imu"
-      args="0 0 0.19996 0 0 0 $(var robot_id)/base_link $(var robot_id)/imu_link"
-      unless="$(var invert_tf)"
-      namespace="$(var robot_id)"/>
-
-  <node pkg="tf2_ros" exec="static_transform_publisher" name="tf_imu"
-      args="0 0 -0.19996 0 0 0 $(var robot_id)/imu_link $(var robot_id)/base_link"
-      if="$(var invert_tf)"
-      namespace="$(var robot_id)"/>
+    <node pkg="tf2_ros" exec="static_transform_publisher" name="tf_imu"
+        args="0 0 -0.19996 0 0 0 $(var robot_id)/imu_link $(var robot_id)/base_link"
+        if="$(var invert_tf)"
+        namespace="$(var robot_id)" />
 
 </launch>

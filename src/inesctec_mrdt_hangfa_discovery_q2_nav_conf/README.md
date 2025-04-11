@@ -97,7 +97,7 @@ mkdir -p ~/ros1_ws/src
 
 # Clone the repository
 cd ~/ros1_ws/src
-git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/adam_nav_conf.git
+git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/inesctec_mrdt_hangfa_discovery_q2_nav_conf.git
 
 # Build
 cd ~/ros1_ws
@@ -118,7 +118,7 @@ mkdir -p ~/ros2_ws/src
 
 # Clone the repository
 cd ~/ros2_ws/src
-git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/adam_nav_conf.git
+git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/inesctec_mrdt_hangfa_discovery_q2_nav_conf.git
 
 # Build
 cd ~/ros2_ws
@@ -131,13 +131,13 @@ source install/setup.bash
 **ROS 1**
 
 ```sh
-roslaunch adam_nav_conf wake_up_dumb_adam.launch
+roslaunch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_adam.launch
 ```
 
 **ROS 2**
 
 ```sh
-ros2 launch adam_nav_conf wake_up_dumb_adam.launch.xml
+ros2 launch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_adam.launch.xml
 ```
 
 ## Acknowledges

@@ -1,11 +1,13 @@
 <launch>
-	<arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
-	<arg name="conf" default="$(optenv ROBOT_CONF sim0)"/>
-	<arg name="ns" default="nn0"/>
+	<arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)" />
+	<arg name="conf" default="$(optenv ROBOT_CONF sim0)" />
+	<arg name="ns" default="nn0" />
 
-	<arg name="file_name" value="$(find adam_nav_conf)/launch/environment/$(arg conf)/$(arg ns)/map"/>
+	<arg name="file_name"
+		value="$(find inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/environment/$(arg conf)/$(arg ns)/map" />
 
 	<group ns="$(arg robot_id)">
-		<node name="map_saver" pkg="map_server" type="map_saver" args="-f $(arg file_name)" clear_params="true" output="$(optenv ROBOT_OUTPUT screen)"/>
+		<node name="map_saver" pkg="map_server" type="map_saver" args="-f $(arg file_name)"
+			clear_params="true" output="$(optenv ROBOT_OUTPUT screen)" />
 	</group>
 </launch>

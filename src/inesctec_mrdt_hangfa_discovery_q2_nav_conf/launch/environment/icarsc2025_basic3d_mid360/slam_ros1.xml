@@ -1,5 +1,5 @@
 <launch>
 
-  <include file="$(dirname)/run_rosbag_record_icarsc2025_basic3d_mid360.launch"/>
+  <include file="$(dirname)/run_rosbag_record_icarsc2025_basic3d_mid360.launch" />
 
 </launch>

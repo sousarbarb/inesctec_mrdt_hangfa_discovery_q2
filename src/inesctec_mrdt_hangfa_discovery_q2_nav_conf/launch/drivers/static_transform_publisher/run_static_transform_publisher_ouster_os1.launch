@@ -1,14 +1,13 @@
 <launch>
 
-  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+    <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)" />
 
-  <arg name="invert_tf" default="False"/>
+    <arg name="invert_tf" default="False" />
 
 
+    <group ns="$(arg robot_id)">
 
-  <group ns="$(arg robot_id)">
-
-    <!--
+        <!--
     BASE > SENSOR BOTTOM: 414,2mm
     DATASHEET (THEORIC) : 22,5mm (dissipator thickness) + 38,195mm (lidar frame)
     TOTAL               : 474,895mm
@@ -41,18 +40,18 @@
     HOWEVER WE REALLY NEED TF STATIC TO OS_SENSOR! (BOTTOM)
      -->
 
-    <node pkg="tf2_ros" type="static_transform_publisher"
-        name="laser_broadcaster"
-        args="0 0 0.4367 0 0 0 $(arg robot_id)/base_link $(arg robot_id)/os_sensor"
-        output="screen"
-        unless="$(arg invert_tf)"/>
+        <node pkg="tf2_ros" type="static_transform_publisher"
+            name="laser_broadcaster"
+            args="0 0 0.4367 0 0 0 $(arg robot_id)/base_link $(arg robot_id)/os_sensor"
+            output="screen"
+            unless="$(arg invert_tf)" />
 
-    <node pkg="tf2_ros" type="static_transform_publisher"
-        name="laser_broadcaster"
-        args="0 0 -0.4367 0 0 0 $(arg robot_id)/os_sensor $(arg robot_id)/base_link"
-        output="screen"
-        if="$(arg invert_tf)"/>
+        <node pkg="tf2_ros" type="static_transform_publisher"
+            name="laser_broadcaster"
+            args="0 0 -0.4367 0 0 0 $(arg robot_id)/os_sensor $(arg robot_id)/base_link"
+            output="screen"
+            if="$(arg invert_tf)" />
 
-  </group>
+    </group>
 
 </launch>

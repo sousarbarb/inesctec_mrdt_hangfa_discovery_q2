@@ -1,11 +1,10 @@
 <launch>
 
-  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)" />
 
-  <arg name="robot_conf" default="$(optenv ROBOT_CONF basic)"/>
+  <arg name="robot_conf" default="$(optenv ROBOT_CONF basic)" />
 
 
-
-  <include file="$(dirname)/../environment/$(arg robot_conf)/navigation_ros1.xml"/>
+  <include file="$(dirname)/../environment/$(arg robot_conf)/navigation_ros1.xml" />
 
 </launch>

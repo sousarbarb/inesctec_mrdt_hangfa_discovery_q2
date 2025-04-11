@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(adam_nav_conf)
+project(inesctec_mrdt_hangfa_discovery_q2_nav_conf)
 
 
 

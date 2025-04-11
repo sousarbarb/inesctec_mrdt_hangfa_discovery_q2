@@ -1,8 +1,10 @@
 <launch>
 
-  <!-- <include file="$(find-pkg-share adam_nav_conf)/launch/hmi/rviz2/run_rviz2.launch.xml">
+  <!-- <include file="$(find-pkg-share
+  inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/hmi/rviz2/run_rviz2.launch.xml">
 
-    <arg name="rviz2_directory" value="$(find-pkg-share adam_nav_conf)/launch/environment/icarsc2025_slam3d_vineslam_mid360/hmi/rviz2"/>
+    <arg name="rviz2_directory" value="$(find-pkg-share
+  inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/environment/icarsc2025_slam3d_vineslam_mid360/hmi/rviz2"/>
 
   </include> -->
 

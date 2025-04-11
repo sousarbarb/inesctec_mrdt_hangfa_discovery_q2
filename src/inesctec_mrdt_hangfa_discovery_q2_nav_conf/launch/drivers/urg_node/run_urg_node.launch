@@ -1,23 +1,22 @@
 <launch>
 
-  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
-
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)" />
 
 
   <group ns="$(arg robot_id)">
 
     <node pkg="urg_node" type="urg_node" name="urg_node" output="screen">
 
-      <param name="ip_address" value="192.168.0.10"/>
-      <param name="ip_port" value="10940"/>
-      <param name="serial_port" value=""/>
-      <param name="serial_baud" value=""/>
-      <param name="frame_id" value="$(arg robot_id)/laser"/>
-      <param name="calibrate_time" value="false"/>
-      <param name="publish_intensity" value="false"/>
-      <param name="publish_multiecho" value="false"/>
-      <param name="angle_min" value="-2.2689"/>
-      <param name="angle_max" value="2.2689"/>
+      <param name="ip_address" value="192.168.0.10" />
+      <param name="ip_port" value="10940" />
+      <param name="serial_port" value="" />
+      <param name="serial_baud" value="" />
+      <param name="frame_id" value="$(arg robot_id)/laser" />
+      <param name="calibrate_time" value="false" />
+      <param name="publish_intensity" value="false" />
+      <param name="publish_multiecho" value="false" />
+      <param name="angle_min" value="-2.2689" />
+      <param name="angle_max" value="2.2689" />
 
     </node>
 

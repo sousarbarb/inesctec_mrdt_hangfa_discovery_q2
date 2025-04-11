@@ -1,9 +1,14 @@
 <launch>
 
-  <include file="$(find-pkg-share adam_nav_conf)/launch/scripts/run_drivers.launch.xml"/>
-  <include file="$(find-pkg-share adam_nav_conf)/launch/scripts/run_localization.launch.xml"/>
-  <include file="$(find-pkg-share adam_nav_conf)/launch/scripts/run_navigation.launch.xml"/>
-  <include file="$(find-pkg-share adam_nav_conf)/launch/scripts/run_slam.launch.xml"/>
-  <include file="$(find-pkg-share adam_nav_conf)/launch/scripts/run_hmi.launch.xml"/>
+  <include
+    file="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/scripts/run_drivers.launch.xml" />
+  <include
+    file="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/scripts/run_localization.launch.xml" />
+  <include
+    file="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/scripts/run_navigation.launch.xml" />
+  <include
+    file="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/scripts/run_slam.launch.xml" />
+  <include
+    file="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/scripts/run_hmi.launch.xml" />
 
 </launch>

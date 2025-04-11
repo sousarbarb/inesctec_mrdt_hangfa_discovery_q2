@@ -1,14 +1,14 @@
 <launch>
 
-  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')" />
 
-  <arg name="rviz2_directory" default="$(find-pkg-share adam_nav_conf)/launch/hmi/rviz2"/>
-
+  <arg name="rviz2_directory"
+    default="$(find-pkg-share inesctec_mrdt_hangfa_discovery_q2_nav_conf)/launch/hmi/rviz2" />
 
 
   <node pkg="rviz2" exec="rviz2"
-      name="rviz2"
-      args="-d $(var rviz2_directory)/rviz2.rviz"
-      namespace="$(var robot_id)"/>
+    name="rviz2"
+    args="-d $(var rviz2_directory)/rviz2.rviz"
+    namespace="$(var robot_id)" />
 
 </launch>

@@ -2,7 +2,7 @@
 
   <include file="$(dirname)/../../hmi/rviz/run_rviz.launch">
 
-    <arg name="rviz_directory" value="$(dirname)/hmi/rviz"/>
+    <arg name="rviz_directory" value="$(dirname)/hmi/rviz" />
 
   </include>
 

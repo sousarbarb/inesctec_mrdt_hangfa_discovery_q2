@@ -1,17 +1,16 @@
 <launch>
 
-  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
-
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)" />
 
 
   <group ns="$(arg robot_id)">
 
     <node pkg="xsens_mti_driver" type="xsens_mti_node" name="xsens_mti_node"
-          output="screen">
+      output="screen">
 
       <rosparam command="load"
-                file="$(dirname)/xsens_ros_mti_driver_mti_630.yaml"
-                subst_value="true"/>
+        file="$(dirname)/xsens_ros_mti_driver_mti_630.yaml"
+        subst_value="true" />
 
     </node>
 

@@ -1,4 +1,4 @@
-image: /home/user/adam_ros1_icarsc2025_ws/src/adam_system/adam_nav_conf/launch/environment/icarsc2025_localisation2d_rgbd/nn0/map.pgm
+image: /home/user/adam_ros1_icarsc2025_ws/src/adam_system/inesctec_mrdt_hangfa_discovery_q2_nav_conf/launch/environment/icarsc2025_localisation2d_rgbd/nn0/map.pgm
 resolution: 0.030000
 origin: [-4.568740, -8.269825, 0.000000]
 negate: 0
