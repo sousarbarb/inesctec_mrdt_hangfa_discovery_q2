@@ -131,12 +131,12 @@ reckoning pose estimation of the robot.
 ### Subscribes
 
 - cmd_vel (`geometry_msgs::Twist.msg`)
-- motors_enc (`sdpo_drivers_interfaces::MotEncArray.msg`)
+- motors_enc (`inesctec_mrdt_drivers_interfaces::MotEncArray.msg`)
 
 ### Publishes
 
 - cmd_vel_ref (`geometry_msgs::Twist.msg`)
-- motors_ref (`sdpo_drivers_interfaces::MotRefArray.msg`)
+- motors_ref (`inesctec_mrdt_drivers_interfaces::MotRefArray.msg`)
 - odom (`nav_msgs::Odometry.msg`)
 - tf2 (N/A)
   - base_frame_id > odom_frame_id
