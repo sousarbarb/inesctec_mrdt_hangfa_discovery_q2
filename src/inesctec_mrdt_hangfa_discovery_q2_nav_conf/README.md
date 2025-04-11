@@ -2,10 +2,7 @@
 
 This repository implements the launch files required to operate the
 [Hangfa Discovery Q2](http://www.hangfa.com/EN/robot/DiscoveryQ2.html)
-four-wheeled omnidirectional robot
-([GitLab](https://gitlab.inesctec.pt/mrdt/mobile-robots/adam),
-[Redmine](http://criis-projects.inesctec.pt/projects/robot-adam)),
-one of the "twin" yellow robots.
+four-wheeled omnidirectional robot, one of the "twin" yellow robots.
 The system implemented is based on the INESC TEC Robotics Navigation Stack that
 it allows you to have different configurations implemented and selecting just
 one based on your environment variables.
@@ -59,7 +56,8 @@ one based on your environment variables.
   - **Additional configurations:**
     - Network:
       1. Open the Settings > Network
-      2. Select the _Livox Mid-360_ wired interface settings
+      2. Select the _Livox Mid-360_ / _RoboSense Helios_ wired interface
+         settings
 
 ## ROS
 
@@ -90,18 +88,18 @@ export ROBOT_CONF=<configuration>   # (default: basic)
 
 ```sh
 # ROS 1 environment setup
-source source /opt/ros/noetic/setup.bash
-
-# Create workspace
-mkdir -p ~/ros1_ws/src
+source /opt/ros/noetic/setup.bash
 
 # Clone the repository
-cd ~/ros1_ws/src
-git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/inesctec_mrdt_hangfa_discovery_q2_nav_conf.git
+git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
+
+# ROS 1 workspace setup
+cd inesctec_mrdt_hangfa_discovery_q2/src
+catkin_init_workspace
 
 # Build
-cd ~/ros1_ws
-catkin_make
+cd ..
+catkin_make --force-cmake -DCMAKE_BUILD_TYPE=Release
 # OR catkin_make_isolated (more slow, build and check dependencies individually)
 # OR catkin build (requires the Pyhton-based catkin tools)
 source devel/setup.bash
@@ -113,16 +111,12 @@ source devel/setup.bash
 # ROS 2 environment setup
 source /opt/ros/foxy/setup.bash
 
-# Create workspace
-mkdir -p ~/ros2_ws/src
-
 # Clone the repository
-cd ~/ros2_ws/src
-git clone git@gitlab.inesctec.pt:mrdt/mobile-robots/adam/inesctec_mrdt_hangfa_discovery_q2_nav_conf.git
+git clone git@github.com:sousarbarb/inesctec_mrdt_hangfa_discovery_q2.git
 
 # Build
-cd ~/ros2_ws
-colcon build
+cd inesctec_mrdt_hangfa_discovery_q2
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --event-handlers summary+ status+ console_cohesion+ console_direct+ console_start_end+ console_stderr+
 source install/setup.bash
 ```
 
@@ -131,32 +125,17 @@ source install/setup.bash
 **ROS 1**
 
 ```sh
-roslaunch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_adam.launch
+roslaunch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_q2.launch
 ```
 
 **ROS 2**
 
 ```sh
-ros2 launch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_adam.launch.xml
+ros2 launch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_q2.launch.xml
 ```
 
-## Acknowledges
+## Acknowledgements
 
 - [5dpo Robotics Team](https://5dpo.github.io/)
 - [Faculty of Engineering, University of Porto (FEUP)](https://sigarra.up.pt/feup/en/)
 - [INESC TEC - Institute for Systems and Computer Engineering, Technology and Science](https://www.inesctec.pt/en/)
-
-## Contacts
-
-If you have any questions or you want to know more about this work, please
-contact one of the contributors of this package:
-
-- Héber Miguel Sobreira ([github](https://github.com/HeberSobreira),
-  [gitlab](https://gitlab.inesctec.pt/heber.m.sobreira),
-  [mail](mailto:heber.m.sobreira@inesctec.pt))
-- Ricardo B. Sousa ([github](https://github.com/sousarbarb/),
-  [gitlab](https://gitlab.inesctec.pt/ricardo.b.sousa),
-  [mail:inesctec](mailto:ricardo.b.sousa@inesctec.pt),
-  [mail:personal](mailto:sousa.ricardob@outlook.com),
-  [mail:professor](mailto:rbs@fe.up.pt),
-  [mail:student](mailto:up201503004@edu.fe.up.pt))
