@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+
+
+  <node pkg="livox_ros_driver2" exec="livox_ros_driver2_node"
+      name="livox_ros_driver2" namespace="$(var robot_id)">
+
+    <remap from="livox/lidar" to="lidar3d"/>
+
+    <param name="xfer_format" value="0"/>
+    <param name="multi_topic" value="0"/>
+    <param name="data_src" value="0"/>
+    <param name="publish_freq" value="10.0"/>
+    <param name="output_data_type" value="0"/>
+    <param name="frame_id" value="$(var robot_id)/lidar3d"/>
+    <param name="lvx_file_path" value="/home/livox/livox_test.lvx"/>
+    <param name="user_config_path" value="$(find-pkg-share adam_nav_conf)/launch/drivers/livox_ros_driver2/MID360_config.json"/>
+    <param name="cmdline_input_bd_code" value="livox0000000001"/>
+
+  </node>
+
+</launch>

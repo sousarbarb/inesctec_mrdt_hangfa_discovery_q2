@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+
+
+  <node pkg="rslidar_sdk" exec="rslidar_sdk_node" output="screen"
+      args="$(find-pkg-share adam_nav_conf)/launch/drivers/rslidar_sdk/rslidar_sdk.yaml $(var robot_id)"
+      namespace="$(var robot_id)"/>
+
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(find-pkg-share adam_nav_conf)/launch/localization/sdpo_localization_odom/run_sdpo_localization_odom_wh.launch.xml"/>
+
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(dirname)/run_rosbag_record_icarsc2025_basic3d_os1.launch"/>
+
+</launch>

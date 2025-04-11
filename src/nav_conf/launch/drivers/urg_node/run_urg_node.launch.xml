@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+
+
+  <node pkg="urg_node" exec="urg_node_driver" name="urg_node"
+      namespace="$(var robot_id)">
+
+    <param name="ip_address" value="192.168.0.10"/>
+    <param name="ip_port" value="10940"/>
+    <!--param name="serial_port" value=""/>
+    <param name="serial_baud" value=""/-->
+    <param name="laser_frame_id" value="$(var robot_id)/laser"/>
+    <param name="calibrate_time" value="false"/>
+    <param name="publish_intensity" value="false"/>
+    <param name="publish_multiecho" value="false"/>
+    <param name="angle_min" value="-2.2689"/>
+    <param name="angle_max" value="2.2689"/>
+
+  </node>
+
+</launch>

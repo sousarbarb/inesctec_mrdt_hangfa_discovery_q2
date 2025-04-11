@@ -1,0 +1,26 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <include file="$(find ouster_ros)/launch/driver.launch">
+
+      <arg name="sensor_hostname" value="os-122050000250.local"/>
+      <arg name="udp_dest"        value="192.168.0.1"/>
+      <arg name="lidar_mode"      value="2048x10"/>
+      <arg name="timestamp_mode"  value="TIME_FROM_ROS_TIME"/>
+      <arg name="metadata"        value="$(dirname)/os-122050000250.json"/>
+      <arg name="viz"             value="false"/>
+      <arg name="tf_prefix"       value="$(arg robot_id)"/>
+      <arg name="sensor_frame"    value="os_sensor"/>
+      <arg name="lidar_frame"     value="lidar3d"/>
+      <arg name="proc_mask"       value="IMU|PCL"/>
+
+    </include>
+
+  </group>
+
+</launch>

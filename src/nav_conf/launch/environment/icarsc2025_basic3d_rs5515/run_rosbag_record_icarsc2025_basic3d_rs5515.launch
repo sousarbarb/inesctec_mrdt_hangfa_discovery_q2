@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <arg name="bags_directory" default="$(env HOME)/bag_files/icarsc2025" />
+  <!-- arg name="bags_directory" default="/media/data/bag_files" / -->
+
+  <arg name="exclude_topics" default="{}"/>
+  <!-- arg name="exclude_topics" default="/$(arg robot_id)/map"/ -->
+
+  <arg name="node_start_delay" default="0.0"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rosbag" type="record" name="log"
+        args="--buffsize=0 --split --duration=30m --size=2048 --output-prefix $(arg bags_directory)/log_basic3d_rs5515 --repeat-latched --exclude '$(arg exclude_topics)'"
+        output="$(optenv ROBOT_OUTPUT screen)"
+        launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@'"/>
+
+  </group>
+
+</launch>

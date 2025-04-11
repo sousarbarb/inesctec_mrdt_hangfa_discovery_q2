@@ -1,0 +1,41 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="joy" type="joy_node" name="joy_driver" output="screen">
+
+      <param name="autorepeat_rate" value="20.0"/>
+      <param name="coalesce_interval_ms" value="1"/>
+
+    </node>
+
+
+
+    <node pkg="sdpo_omnijoy_driver" type="sdpo_omnijoy_driver"
+        name="sdpo_omnijoy_driver" output="screen">
+
+      <param name="axis_linear_x" value="1"/>
+      <param name="axis_linear_y" value="0"/>
+      <param name="axis_angular" value="2"/>
+
+      <param name="axis_deadman" value="4"/>
+      <param name="axis_turbo" value="5"/>
+      <param name="axis_turbo_up" value="7"/>
+      <param name="axis_turbo_down" value="6"/>
+
+      <param name="scale_linear" value="0.20"/>
+      <param name="scale_angular" value="0.40"/>
+      <param name="turbo_scale_linear" value="0.40"/>
+      <param name="turbo_scale_angular" value="0.80"/>
+      <param name="turbo_max_scale_linear" value="1.5"/>
+      <param name="turbo_max_scale_angular" value="3.0"/>
+
+    </node>
+
+  </group>
+
+</launch>

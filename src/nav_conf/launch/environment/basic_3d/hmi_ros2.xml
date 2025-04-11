@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find-pkg-share adam_nav_conf)/launch/hmi/rviz2/run_rviz2.launch.xml">
+
+    <arg name="rviz2_directory" value="$(find-pkg-share adam_nav_conf)/launch/environment/basic_3d/hmi/rviz2"/>
+
+  </include>
+
+</launch>

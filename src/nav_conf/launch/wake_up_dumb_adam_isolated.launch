@@ -1,0 +1,5 @@
+<launch>
+    <arg name="root_directory" value="$(dirname)"/>
+
+    <include file="$(arg root_directory)/hmi/remote_launch2/run_remote_launch2.launch"></include>
+</launch>

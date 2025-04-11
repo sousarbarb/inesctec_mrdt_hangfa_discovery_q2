@@ -1,0 +1,25 @@
+<launch>
+
+  <!--
+    HOW TO RUN THIS LAUNCH FILE:
+    $ cd ~/bag_files/     OR      $ cd /media/data/bag_files
+    $ roslaunch adam_nav_conf run_rosbag_play.launch filenames:=$(pwd)/log_<name of the log file>.bag
+  -->
+
+  <arg name="robot_id" value="$(optenv ROBOT_ID unnamed_robot)"/>
+  <arg name="conf" value="$(optenv ROBOT_CONF basic)"/>
+
+  <arg name="filenames"/>
+  <arg name="rate" default="1.0"/>
+  <arg name="start" default="0.0"/>
+
+
+
+  <param name="/use_sim_time" value="true"/>
+
+
+
+  <node pkg="rosbag" type="play" name="play" output="screen"
+      args="--clock --start $(arg start) --rate $(arg rate) $(arg filenames)"/>
+
+</launch>

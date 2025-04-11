@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(dirname)/../../slam/slam_toolbox/run_slam_toolbox.launch"/>
+
+</launch>

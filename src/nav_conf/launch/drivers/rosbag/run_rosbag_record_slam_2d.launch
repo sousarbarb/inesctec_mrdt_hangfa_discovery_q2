@@ -1,0 +1,34 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <arg name="bags_directory" default="$(env HOME)/bag_files" />
+  <!-- arg name="bags_directory" default="/media/data/bag_files" / -->
+
+  <arg name="include_topics"
+      default="/$(arg robot_id)/motors_enc /$(arg robot_id)/scan"/>
+  <!-- arg name="include_topics"
+      default="/$(arg robot_id)/odom /$(arg robot_id)/scan"/ -->
+
+  <arg name="node_start_delay" default="0.0"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rosbag" type="record" name="log"
+        args="--buffsize=0 --split --duration=15m --size=512 --bz2 --output-prefix $(arg bags_directory)/log_slam --repeat-latched '$(arg include_topics)'"
+        output="$(optenv ROBOT_OUTPUT screen)"
+        launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@'"/>
+
+    <!--
+      @todo evaluate decreasing even further the size, to avoid long write
+      times that may lead to data loss... (note that even when a split is done,
+      the write may still be happenning of the previous bag, and if you stop
+      rightly at that moment, you may loose not only the current bag file but
+      also data from the previous one....)
+    -->
+
+  </group>
+
+</launch>

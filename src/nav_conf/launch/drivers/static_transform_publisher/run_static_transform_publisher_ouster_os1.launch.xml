@@ -1,0 +1,54 @@
+<launch>
+
+  <arg name="robot_id" default="$(env ROBOT_ID 'unnamed_robot')"/>
+
+  <arg name="invert_tf" default="False"/>
+
+
+
+    <!--
+    BASE > SENSOR BOTTOM: 414,2mm
+    DATASHEET (THEORIC) : 22,5mm (dissipator thickness) + 38,195mm (lidar frame)
+    TOTAL               : 474,895mm
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+      name="laser_broadcaster"
+      args="0 0 0.474895 0 0 0 $(var robot_id)/base_link $(var robot_id)/lidar3d"
+      unless="$(var invert_tf)"
+      namespace="$(var robot_id)"/>
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+      name="laser_broadcaster"
+      args="0 0 -0.474895 0 0 0 $(var robot_id)/lidar3d $(var robot_id)/base_link"
+      if="$(var invert_tf)"
+      namespace="$(var robot_id)"/>
+
+    BASE > SENSOR BOTTOM: 414,2mm
+    DATASHEET (REAL?)   : 22,5mm (dissipator thickness) + 36,18mm (lidar frame)
+    TOTAL               : 472,88mm
+
+    execute:
+    user@eve:~$ curl -i -X GET http://192.168.2.11/api/v1/sensor/metadata/lidar_intrinsics
+    HTTP/1.1 200 OK
+    content-length: 85
+    content-type: application/json
+    Connection: close
+
+    {"lidar_to_sensor_transform": [-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 36.18, 0, 0, 0, 1]}
+
+    HOWEVER WE REALLY NEED TF STATIC TO OS_SENSOR! (BOTTOM)
+     -->
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+      name="laser_broadcaster_sensor"
+      args="0 0 0.4367 0 0 0 $(var robot_id)/base_link $(var robot_id)/os_sensor"
+      unless="$(var invert_tf)"
+      namespace="$(var robot_id)"/>
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+      name="laser_broadcaster_sensor"
+      args="0 0 -0.4367 0 0 0 $(var robot_id)/os_sensor $(var robot_id)/base_link"
+      if="$(var invert_tf)"
+      namespace="$(var robot_id)"/>
+
+</launch>

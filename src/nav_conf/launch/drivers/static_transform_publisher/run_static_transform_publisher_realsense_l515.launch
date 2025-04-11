@@ -1,0 +1,34 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <arg name="invert_tf" default="False"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <!--
+      z:214.2mm base_link to sensor bend plate center hole
+      x:200.5mmm z:-90.75mm camera glass to sensor bend plate center hole
+
+      l515_cam_center_to_depth_pz = l515_cam_center_to_transmitter_pz+l515_cam_transmitter_to_depth_pz
+                                  = -10mm + 1mm
+                                  = -9mm
+    -->
+
+    <node pkg="tf2_ros" type="static_transform_publisher"
+        name="tf_realsense_l515"
+        args="0.196 0 0.12345 0 0 0 $(arg robot_id)/base_link $(arg robot_id)/camera_link"
+        output="screen"
+        unless="$(arg invert_tf)"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher"
+        name="tf_realsense_l515"
+        args="-0.196 0 -0.12345 0 0 0 $(arg robot_id)/camera_link $(arg robot_id)/base_link"
+        output="screen"
+        if="$(arg invert_tf)"/>
+
+  </group>
+
+</launch>

@@ -1,0 +1,32 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <arg name="bags_directory" default="$(env HOME)/bag_files" />
+  <!-- arg name="bags_directory" default="/media/data/bag_files" / -->
+
+  <arg name="include_topics"
+      default="/$(arg robot_id)/camera/color/image_raw
+               /$(arg robot_id)/camera/depth/color/points
+               /$(arg robot_id)/camera/aligned_depth_to_color/image_raw
+               /$(arg robot_id)/cmd_vel
+               /$(arg robot_id)/nn0/map
+               /$(arg robot_id)/odom
+               /$(arg robot_id)/scan
+               /tf
+               /tf_static"/>
+
+  <arg name="node_start_delay" default="0.0"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rosbag" type="record" name="log"
+        args="--buffsize=0 --split --duration=5m --size=4096 --output-prefix $(arg bags_directory)/log_pallet_detection --repeat-latched '$(arg include_topics)'"
+        output="$(optenv ROBOT_OUTPUT screen)"
+        launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@'"/>
+
+  </group>
+
+</launch>

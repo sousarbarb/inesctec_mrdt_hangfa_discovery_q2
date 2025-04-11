@@ -1,0 +1,21 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="rslidar_sdk" type="rslidar_sdk_node"
+        name="rslidar_sdk"
+        output="screen"
+        args="$(dirname)/rslidar_sdk.yaml $(arg robot_id)">
+
+      <param name="config_path" value="$(dirname)/rslidar_sdk.yaml"/>
+      <param name="param_ns" value="$(arg robot_id)"/>
+
+    </node>
+
+  </group>
+
+</launch>

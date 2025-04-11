@@ -1,0 +1,101 @@
+<launch>
+
+  <arg name="robot_id" default="$(optenv ROBOT_ID unnamed_robot)"/>
+
+  <arg name="scan_topic" default="scan"/>
+
+
+
+  <group ns="$(arg robot_id)">
+
+    <node pkg="slam_toolbox" type="sync_slam_toolbox_node" name="slam_toolbox"
+        output="screen">
+
+      <remap from="/map" to="map"/>
+
+      <!-- Source: https://github.com/SteveMacenski/slam_toolbox/blob/noetic-devel/slam_toolbox/config/mapper_params_lifelong.yaml -->
+      <!-- Plugin params -->
+      <param name="solver_plugin" value="solver_plugins::CeresSolver"/>
+      <param name="ceres_linear_solver" value="SPARSE_NORMAL_CHOLESKY"/>
+      <param name="ceres_preconditioner" value="SCHUR_JACOBI"/>
+      <param name="ceres_trust_strategy" value="LEVENBERG_MARQUARDT"/>
+      <param name="ceres_dogleg_type" value="TRADITIONAL_DOGLEG"/>
+      <param name="ceres_loss_function" value="None"/>
+
+      <!-- ROS Parameters -->
+      <param name="odom_frame" value="$(arg robot_id)/odom"/>
+      <param name="map_frame" value="$(arg robot_id)/map"/>
+      <param name="base_frame" value="$(arg robot_id)/base_footprint"/>
+      <param name="scan_topic" value="/$(arg robot_id)/$(arg scan_topic)"/>
+      <param name="mode" value="mapping"/>
+
+      <!-- lifelong params -->
+      <param name="lifelong_search_use_tree" value="false"/>
+      <param name="lifelong_minimum_score" value="0.1"/>
+      <param name="lifelong_iou_match" value="0.85"/>
+      <param name="lifelong_node_removal_score" value="0.04"/>
+      <param name="lifelong_overlap_score_scale" value="0.06"/>
+      <param name="lifelong_constraint_multiplier" value="0.08"/>
+      <param name="lifelong_nearby_penalty" value="0.001"/>
+      <param name="lifelong_candidates_scale" value="0.03"/>
+
+      <!-- if you'd like to immediately start continuing a map at a given pose -->
+      <!-- or at the dock, but they are mutually exclusive, if pose is given -->
+      <!-- will use pose -->
+      <!-- map_file_name: test_steve -->
+      <!-- map_start_pose: [0.0, 0.0, 0.0] -->
+      <!-- map_start_at_dock: true -->
+
+      <param name="debug_logging" value="false"/>
+      <param name="throttle_scans" value="1"/>
+      <param name="transform_publish_period" value="0.02"/>
+      <param name="map_update_interval" value="5.0"/>
+      <param name="resolution" value="0.03"/>
+      <param name="max_laser_range" value="20.0"/>
+      <param name="minimum_time_interval" value="0.5"/>
+      <param name="transform_timeout" value="0.2"/>
+      <param name="tf_buffer_duration" value="10."/>
+      <param name="stack_size_to_use" value="40000000"/>
+
+      <!-- General Parameters -->
+      <param name="use_scan_matching" value="true"/>
+      <param name="use_scan_barycenter" value="true"/>
+      <param name="minimum_travel_distance" value="0.5"/>
+      <param name="minimum_travel_heading" value="0.5"/>
+      <param name="scan_buffer_size" value="10"/>
+      <param name="scan_buffer_maximum_scan_distance" value="10"/>
+      <param name="link_match_minimum_response_fine" value="0.1"/>
+      <param name="link_scan_maximum_distance" value="1.5"/>
+      <param name="loop_search_maximum_distance" value="3.0"/>
+      <param name="do_loop_closing" value="true"/>
+      <param name="loop_match_minimum_chain_size" value="10"/>
+      <param name="loop_match_maximum_variance_coarse" value="3.0"/>
+      <param name="loop_match_minimum_response_coarse" value="0.35"/>
+      <param name="loop_match_minimum_response_fine" value="0.45"/>
+
+      <!-- Correlation Parameters - Correlation Parameters -->
+      <param name="correlation_search_space_dimension" value="0.5"/>
+      <param name="correlation_search_space_resolution" value="0.01"/>
+      <param name="correlation_search_space_smear_deviation" value="0.1"/>
+
+      <!-- Correlation Parameters - Loop Closure Parameters -->
+      <param name="loop_search_space_dimension" value="8.0"/>
+      <param name="loop_search_space_resolution" value="0.05"/>
+      <param name="loop_search_space_smear_deviation" value="0.03"/>
+
+      <!-- Scan Matcher Parameters -->
+      <param name="distance_variance_penalty" value="0.5"/>
+      <param name="angle_variance_penalty" value="1.0"/>
+
+      <param name="fine_search_angle_offset" value="0.00349"/>
+      <param name="coarse_search_angle_offset" value="0.349"/>
+      <param name="coarse_angle_resolution" value="0.0349"/>
+      <param name="minimum_angle_penalty" value="0.9"/>
+      <param name="minimum_distance_penalty" value="0.5"/>
+      <param name="use_response_expansion" value="true"/>
+
+    </node>
+
+  </group>
+
+</launch>
