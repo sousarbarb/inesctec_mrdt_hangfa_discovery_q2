@@ -5,46 +5,49 @@
 namespace inesctec_mrdt_localization_odom
 {
 
-  const std::string kOdomWhOmni4Str = "omni4";
+const std::string kOdomWhOmni4Str = "omni4";
 
-  class OdomWhOmni4 : public OdomWh
+class OdomWhOmni4 : public OdomWh
+{
+ public:
+
+  static const size_t kWhIdxFL = 0;
+  static const size_t kWhIdxFR = 1;
+  static const size_t kWhIdxBL = 2;
+  static const size_t kWhIdxBR = 3;
+
+  static const size_t kRobLenIdxF2B = 0;
+  static const size_t kRobLenIdxL2R = 1;
+
+ public:
+
+  OdomWhOmni4() = delete;
+  OdomWhOmni4(const std::vector<size_t> &wh_idx,
+              const std::vector<double> &wh_d, const std::vector<bool> &wh_inv,
+              const std::vector<double> &rob_len);
+
+  inline OdomWhType getOdomWhType() const override
   {
-  public:
-    static const size_t kWhIdxFL = 0;
-    static const size_t kWhIdxFR = 1;
-    static const size_t kWhIdxBL = 2;
-    static const size_t kWhIdxBR = 3;
+    return OdomWhType::kOmni4Wh;
+  }
 
-    static const size_t kRobLenIdxF2B = 0;
-    static const size_t kRobLenIdxL2R = 1;
+  std::string getMotorDriveIdxStr(const size_t &idx) override;
 
-  public:
-    OdomWhOmni4() = delete;
-    OdomWhOmni4(const std::vector<size_t> &wh_idx,
-                const std::vector<double> &wh_d, const std::vector<bool> &wh_inv,
-                const std::vector<double> &rob_len);
+  void updateVelRef() override;
 
-    inline OdomWhType getOdomWhType() const override
-    {
-      return OdomWhType::kOmni4Wh;
-    }
+  void computeFwdKin(const std::vector<double> &v_mot, double &v, double &vn,
+                     double &w) override;
+  void computeInvKin(const double &v, const double &vn, const double &w,
+                     std::vector<double> &v_mot) override;
 
-    std::string getMotorDriveIdxStr(const size_t &idx) override;
+ protected:
 
-    void updateVelRef() override;
+  void updateVel() override;
+  void updateVelInv() override;
+  void updateVelRefInv() override;
 
-    void computeFwdKin(const std::vector<double> &v_mot,
-                       double &v, double &vn, double &w) override;
-    void computeInvKin(const double &v, const double &vn, const double &w,
-                       std::vector<double> &v_mot) override;
+  void updateOdomDelta() override;
+  void updateOdomDeltaInv() override;
+};
 
-  protected:
-    void updateVel() override;
-    void updateVelInv() override;
-    void updateVelRefInv() override;
-
-    void updateOdomDelta() override;
-    void updateOdomDeltaInv() override;
-  };
-
-} // namespace inesctec_mrdt_localization_odom
+}  // namespace inesctec_mrdt_localization_odom

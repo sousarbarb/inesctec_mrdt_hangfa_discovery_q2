@@ -5,44 +5,47 @@
 namespace inesctec_mrdt_localization_odom
 {
 
-  const std::string kOdomWhOmni3Str = "omni3";
+const std::string kOdomWhOmni3Str = "omni3";
 
-  class OdomWhOmni3 : public OdomWh
+class OdomWhOmni3 : public OdomWh
+{
+ public:
+
+  static const size_t kWhIdxFR = 0;
+  static const size_t kWhIdxFL = 1;
+  static const size_t kWhIdxB = 2;
+
+  static const size_t kRobLenIdx = 0;
+
+ public:
+
+  OdomWhOmni3() = delete;
+  OdomWhOmni3(const std::vector<size_t> &wh_idx,
+              const std::vector<double> &wh_d, const std::vector<bool> &wh_inv,
+              const std::vector<double> &rob_len);
+
+  inline OdomWhType getOdomWhType() const override
   {
-  public:
-    static const size_t kWhIdxFR = 0;
-    static const size_t kWhIdxFL = 1;
-    static const size_t kWhIdxB = 2;
+    return OdomWhType::kOmni3Wh;
+  }
 
-    static const size_t kRobLenIdx = 0;
+  std::string getMotorDriveIdxStr(const size_t &idx) override;
 
-  public:
-    OdomWhOmni3() = delete;
-    OdomWhOmni3(const std::vector<size_t> &wh_idx,
-                const std::vector<double> &wh_d, const std::vector<bool> &wh_inv,
-                const std::vector<double> &rob_len);
+  void updateVelRef() override;
 
-    inline OdomWhType getOdomWhType() const override
-    {
-      return OdomWhType::kOmni3Wh;
-    }
+  void computeFwdKin(const std::vector<double> &v_mot, double &v, double &vn,
+                     double &w) override;
+  void computeInvKin(const double &v, const double &vn, const double &w,
+                     std::vector<double> &v_mot) override;
 
-    std::string getMotorDriveIdxStr(const size_t &idx) override;
+ protected:
 
-    void updateVelRef() override;
+  void updateVel() override;
+  void updateVelInv() override;
+  void updateVelRefInv() override;
 
-    void computeFwdKin(const std::vector<double> &v_mot,
-                       double &v, double &vn, double &w) override;
-    void computeInvKin(const double &v, const double &vn, const double &w,
-                       std::vector<double> &v_mot) override;
+  void updateOdomDelta() override;
+  void updateOdomDeltaInv() override;
+};
 
-  protected:
-    void updateVel() override;
-    void updateVelInv() override;
-    void updateVelRefInv() override;
-
-    void updateOdomDelta() override;
-    void updateOdomDeltaInv() override;
-  };
-
-} // namespace inesctec_mrdt_localization_odom
+}  // namespace inesctec_mrdt_localization_odom
