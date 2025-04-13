@@ -60,9 +60,9 @@
    source /opt/ros/foxy/setup.bash
    mkdir -p ~/ros2_ws/src
    cd ~/ros2_ws/src
-   
-   git clone git@github.com:5dpo/rslidar_sdk.git
-   git clone git@github.com:RoboSense-LiDAR/rslidar_msg.git
+
+   git clone git@github.com:sousarbarb/rslidar_sdk.git
+   git clone git@github.com:sousarbarb/rslidar_msg.git
 
    cd rslidar_sdk
    git submodule init
@@ -82,5 +82,5 @@
 ### Launch
 
 ```sh
-roslaunch sdpo_hangfaq2_nav_conf run_rslidar_sdk.launch.xml
+roslaunch inesctec_mrdt_hangfa_discovery_q2_nav_conf run_rslidar_sdk.launch.xml
 ```
