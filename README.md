@@ -214,3 +214,31 @@ for the period 2021-2026, within project GreenAuto, with reference 54.
 - **Duration:** 51 months
 - **URL:**
   [https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/](https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/)
+
+## Citation
+
+**Plain Text**
+
+R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P.
+Moreira,
+"Integrating Multimodal Perception into Ground Mobile Robots,"
+_2025 IEEE International Conference on Autonomous Robot Systems and_
+_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
+[Manuscript accepted for publication].
+[[github]](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
+[[preprint]](http://doi.org/10.13140/RG.2.2.29381.15845/1)
+
+**BibTex**
+
+```bibtex
+@INPROCEEDINGS{sousa2025icarsc,
+  author    = {Ricardo B. Sousa and Héber Miguel Sobreira and João G. Martins and Paulo G. Costa and Manuel F. Silva and António P. Moreira},
+  booktitle = {2025 IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC)},
+  title     = {Integrating Multimodal Perception into Ground Mobile Robots},
+  year      = {2025},
+  volume    = {},
+  number    = {},
+  pages     = {--},
+  doi       = {},
+  note      = {Manuscript accepted for publication},}
+```
