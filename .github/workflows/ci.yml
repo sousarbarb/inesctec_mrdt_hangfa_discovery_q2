@@ -35,7 +35,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ros_distro: [noetic, foxy, humble, iron]
+        ros_distro: [noetic, foxy] # , humble, iron]
         include:
           - ros_distro: noetic
             ros_version: 1
@@ -43,12 +43,12 @@ jobs:
           - ros_distro: foxy
             ros_version: 2
             ubuntu_version: 20.04
-          - ros_distro: humble
-            ros_version: 2
-            ubuntu_version: 22.04
-          - ros_distro: iron
-            ros_version: 2
-            ubuntu_version: 22.04
+          # - ros_distro: humble
+          #   ros_version: 2
+          #   ubuntu_version: 22.04
+          # - ros_distro: iron
+          #   ros_version: 2
+          #   ubuntu_version: 22.04
     runs-on: ubuntu-${{ matrix.ubuntu_version }}
     container:
       image: osrf/ros:${{ matrix.ros_distro }}-desktop
