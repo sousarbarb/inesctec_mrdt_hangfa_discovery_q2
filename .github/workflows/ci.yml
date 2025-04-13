@@ -64,13 +64,6 @@ jobs:
           sudo apt-get install -y libpcap-dev
           sudo apt-get install -y ros-${{ matrix.ros_distro }}-joy \
                                   ros-${{ matrix.ros_distro }}-pcl-ros
-      - name: Livox-SDK
-        run: |
-          git clone https://github.com/Livox-SDK/Livox-SDK.git
-          cd Livox-SDK
-          cd build/
-          cmake .. && make -j
-          sudo make install
       - name: Livox-SDK2
         run: |
           git clone https://github.com/Livox-SDK/Livox-SDK2.git
