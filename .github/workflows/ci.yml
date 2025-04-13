@@ -35,7 +35,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ros_distro: [noetic, foxy, humble, iron, rolling]
+        ros_distro: [noetic, foxy, humble, iron]
         include:
           - ros_distro: noetic
             ros_version: 1
@@ -49,9 +49,6 @@ jobs:
           - ros_distro: iron
             ros_version: 2
             ubuntu_version: 22.04
-          - ros_distro: rolling
-            ros_version: 2
-            ubuntu_version: latest
     runs-on: ubuntu-${{ matrix.ubuntu_version }}
     container:
       image: osrf/ros:${{ matrix.ros_distro }}-desktop
@@ -72,3 +69,26 @@ jobs:
           cd build/
           cmake .. && make -j
           sudo make install
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: inesctec_mrdt_hangfa_discovery_q2
+          submodules: recursive
+      - name: Build (ROS 1)
+        if: matrix.ros_version == 1
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          cd inesctec_mrdt_hangfa_discovery_q2/src
+          catkin_init_workspace
+          cd ..
+          catkin_make --force-cmake --cmake-args -DCMAKE_BUILD_TYPE=Release
+          source devel/setup.bash
+        shell: bash
+      - name: Build (ROS 2)
+        if: matrix.ros_version == 2
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          cd inesctec_mrdt_hangfa_discovery_q2
+          colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --event-handlers status+ console_direct+ console_start_end+
+          source install/setup.bash
+        shell: bash
