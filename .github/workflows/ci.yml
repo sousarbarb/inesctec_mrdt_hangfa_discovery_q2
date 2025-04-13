@@ -3,8 +3,13 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -26,3 +31,51 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        ros_distro: [noetic, foxy, humble, iron, rolling]
+        include:
+          - ros_distro: noetic
+            ros_version: 1
+            ubuntu_version: 20.04
+          - ros_distro: foxy
+            ros_version: 2
+            ubuntu_version: 20.04
+          - ros_distro: humble
+            ros_version: 2
+            ubuntu_version: 22.04
+          - ros_distro: iron
+            ros_version: 2
+            ubuntu_version: 22.04
+          - ros_distro: rolling
+            ros_version: 2
+            ubuntu_version: latest
+    runs-on: ubuntu-${{ matrix.ubuntu_version }}
+    container:
+      image: osrf/ros:${{ matrix.ros_distro }}-desktop
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get dist-upgrade -y
+          sudo apt-get install -y git build-essential cmake
+          sudo apt-get install -y libpcap-dev
+          sudo apt-get install -y ros-${{ matrix.ros_distro }}-joy \
+                                  ros-${{ matrix.ros_distro }}-pcl-ros
+      - name: Livox-SDK
+        run: |
+          git clone https://github.com/Livox-SDK/Livox-SDK.git
+          cd Livox-SDK
+          cd build/
+          cmake .. && make -j
+          sudo make install
+      - name: Livox-SDK2
+        run: |
+          git clone https://github.com/Livox-SDK/Livox-SDK2.git
+          cd Livox-SDK2/
+          mkdir build
+          cd build/
+          cmake .. && make -j
+          sudo make install
