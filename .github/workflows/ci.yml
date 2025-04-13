@@ -59,8 +59,9 @@ jobs:
           sudo apt-get dist-upgrade -y
           sudo apt-get install -y git build-essential cmake
           sudo apt-get install -y libpcap-dev
-          sudo apt-get install -y ros-${{ matrix.ros_distro }}-joy \
-                                  ros-${{ matrix.ros_distro }}-pcl-ros
+          sudo apt-get install -y ros-${{ matrix.ros_distro }}-joy      \
+                                  ros-${{ matrix.ros_distro }}-pcl-ros  \
+                                  ros-${{ matrix.ros_distro }}-libpointmatcher
       - name: Livox-SDK2
         run: |
           git clone https://github.com/Livox-SDK/Livox-SDK2.git
@@ -68,6 +69,14 @@ jobs:
           mkdir build
           cd build/
           cmake .. && make -j
+          sudo make install
+      - name: yaml-cpp
+        run: |
+          git clone https://github.com/jbeder/yaml-cpp.git
+          cd yaml-cpp/
+          mkdir build
+          cd build/
+          cmake .. -DYAML_BUILD_SHARED_LIBS=ON && make -j
           sudo make install
       - name: Checkout repository
         uses: actions/checkout@v4
