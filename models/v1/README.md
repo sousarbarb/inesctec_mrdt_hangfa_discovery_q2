@@ -1,10 +1,40 @@
 # 3D Models of the Revised Hangfa Discovery Q2 Platform
 
-This folder presents all the 3D models designed for the revised platform.
+This folder presents all the 3D models designed for the revised platform in
+[AutoDesk Fusion 360](https://www.autodesk.com/products/fusion-360/).
 These models include a simplified 3D model for the mechanical platform,
-a STEP+F3D file for each 3D printed component considered in the
-revision, as well as a major STEP+F3D that aglomerates all models into a single
-project.
+a STEP+F3D file for each 3D-printed PETG component considered in the
+revision, as well as a major F3D file that aglomerates all models into a single
+project:
+- **[hangfa-discovery-q2_mechanical-platform.f3d](hangfa-discovery-q2_mechanical-platform.f3d):**
+  original mechanical platform of the
+  [Hangfa Discovery Q2](https://www.hangfa-europe.com/en/omni-robot/discovery)
+  omnidirectional mobile robot
+- **[hangfa-discovery-q2_multimodal-perception-mechanical-integration.f3d](hangfa-discovery-q2_multimodal-perception-mechanical-integration.f3d):**
+  major [AutoDesk Fusion 360](https://www.autodesk.com/products/fusion-360/)
+  project that aglomerates all 3D models design in the scope of this work into a
+  single project file
+- **electronics_baseplate\*.\*:** framework to host all the electronics proposed
+  in the paper inside the metallic box of the original
+  [Hangfa Discovery Q2](https://www.hangfa-europe.com/en/omni-robot/discovery)
+  platform
+- **battery_xiaomi-powerbank-50W-20000mAh_case\*.\*:** case for the
+  Powerbank Xiaomi Mi 50W 20000mAh
+- **hangfa-discovery-q2_optitrack_\*.\*:** OptiTrack 3D-printed accessories to
+  fixate onto the robot (wheels and top bend metal sheet) in order to track the
+  platform's pose with the OptiTrack Motion Capture (MoCap) system
+  (compatible with IR-reflective tracking spheres from OptiTrack on M4 screws)
+- **sbc_lattepanda-3-delta_case\*.\*:** case for the
+  [LattePanda 3 Delta](https://www.lattepanda.com/lattepanda-3-delta)
+  Single Board Computer (SBC)
+- **sensors-plate_front-support_rgbd-cameras\*.\*:** generic RGBD cameras
+  model (see the compatibility further down) as the front support of the top
+  bend metal sheet
+- **sensors-plate_back-support_wi-fi-antennas\*.\*:** Wi-Fi antennas model as
+  the back support of the top bend metal sheet (should increase wireless network
+  connectivity)
+- **sensors-plate_\<sensor type\>_\<sensor model\>\*.\*:** 3D-printed supports
+  to fixate the `<sensor model>` to the top bend metal sheet
 
 Even though the repository is focused on the v1 version of the overhaul revision
 of the platform, there was an initial version ([v0](/models/v0/)) that only
