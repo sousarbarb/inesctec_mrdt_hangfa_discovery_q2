@@ -1,4 +1,4 @@
-# inesctec_mrdt_hangfa_discovery_q2
+# [Integrating Multimodal Perception into Ground Mobile Robots](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
 
 Repository contains all the documentation associated with the modifications
 made by [INESC TEC](https://www.inesctec.pt/en/) on the
@@ -137,6 +137,53 @@ export ROBOT_CONF=<configuration>   # (default: basic)
 ros2 launch inesctec_mrdt_hangfa_discovery_q2_nav_conf wake_up_dumb_q2.launch.xml
 ```
 
+## Contributing
+
+Any contributions that you make are greatly appreciated. Please proceed as
+follows:
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch in your repository
+5. Open a pull request in the project's original repository
+
+## License
+
+Distributed under the _MIT License_.
+See [LICENSE](/LICENSE) for more information.
+
+## References
+
+If you use _inesctec_mrdt_hangfa_discovery_q2_ in a work that leads to a
+scientific publication, we would appreciate it if you would kindly cite
+_inesctec_mrdt_hangfa_discovery_q2_ in your manuscript.
+
+**Plain Text**
+
+R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P.
+Moreira,
+"Integrating Multimodal Perception into Ground Mobile Robots,"
+_2025 IEEE International Conference on Autonomous Robot Systems and_
+_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. 104-111,
+doi: [10.1109/ICARSC65809.2025.10970176](https://doi.org/10.1109/ICARSC65809.2025.10970176)
+[[github]](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
+[[preprint]](http://doi.org/10.13140/RG.2.2.29381.15845/1)
+[[website]](https://sousarbarb.github.io/inesctec_mrdt_hangfa_discovery_q2/)
+
+**BibTex**
+
+```bibtex
+@INPROCEEDINGS{sousa2025icarsc,
+  author    = {Ricardo B. Sousa and Héber Miguel Sobreira and João G. Martins and Paulo G. Costa and Manuel F. Silva and António P. Moreira},
+  booktitle = {2025 IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC)},
+  title     = {Integrating Multimodal Perception into Ground Mobile Robots},
+  year      = {2025},
+  volume    = {},
+  number    = {},
+  pages     = {104--111},
+  doi       = {10.1109/ICARSC65809.2025.10970176}}
+```
+
 ## Contacts
 
 If you have any questions or you want to know more about this work, please
@@ -214,31 +261,3 @@ for the period 2021-2026, within project GreenAuto, with reference 54.
 - **Duration:** 51 months
 - **URL:**
   [https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/](https://transparencia.gov.pt/en/fundos-europeus/prr/beneficiarios-projetos/projeto/02/C05-i01.02/2022.PC644867037-00000013/)
-
-## Citation
-
-**Plain Text**
-
-R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P.
-Moreira,
-"Integrating Multimodal Perception into Ground Mobile Robots,"
-_2025 IEEE International Conference on Autonomous Robot Systems and_
-_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
-[Manuscript accepted for publication].
-[[github]](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
-[[preprint]](http://doi.org/10.13140/RG.2.2.29381.15845/1)
-
-**BibTex**
-
-```bibtex
-@INPROCEEDINGS{sousa2025icarsc,
-  author    = {Ricardo B. Sousa and Héber Miguel Sobreira and João G. Martins and Paulo G. Costa and Manuel F. Silva and António P. Moreira},
-  booktitle = {2025 IEEE International Conference on Autonomous Robot Systems and Competitions (ICARSC)},
-  title     = {Integrating Multimodal Perception into Ground Mobile Robots},
-  year      = {2025},
-  volume    = {},
-  number    = {},
-  pages     = {--},
-  doi       = {},
-  note      = {Manuscript accepted for publication},}
-```
