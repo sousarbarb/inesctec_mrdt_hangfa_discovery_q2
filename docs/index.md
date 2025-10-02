@@ -167,6 +167,12 @@ contact one of the following contributors:
 
 **GreenAuto: Green innovation for the Automotive Industry**
 
+This work is co-financed by Component 5 - Capitalization and Business
+Innovation, integrated in the Resilience Dimension of the Recovery and
+Resilience Plan within the scope of the Recovery and Resilience Mechanism (MRR)
+of the European Union (EU), framed in the Next Generation EU, for the period
+2021 - 2026, within project GreenAuto, with reference 54.
+
 - **Operation Code:** 02/C05-i01.02/2022.PC644867037-00000013
 - **Beneficiary:** Peugeot Citröen Automóveis Portugal, S.A.
 - **Work Package:** WP10 - Automated logistics for the automotive industry
@@ -192,8 +198,8 @@ R.B. Sousa, H.M. Sobreira, J.G. Martins, P.G. Costa, M.F. Silva and A.P.
 Moreira,
 "Integrating Multimodal Perception into Ground Mobile Robots,"
 _2025 IEEE International Conference on Autonomous Robot Systems and_
-_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
-[Manuscript accepted for publication].
+_Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. 104-111,
+doi: [10.1109/ICARSC65809.2025.10970176](https://doi.org/10.1109/ICARSC65809.2025.10970176).
 [[github]](https://github.com/sousarbarb/inesctec_mrdt_hangfa_discovery_q2)
 [[preprint]](http://doi.org/10.13140/RG.2.2.29381.15845/1)
 
@@ -207,7 +213,6 @@ _Competitions (ICARSC2025)_, Madeira, Portugal, 2025, pp. TBD, doi: TBD
   year      = {2025},
   volume    = {},
   number    = {},
-  pages     = {--},
-  doi       = {},
-  note      = {Manuscript accepted for publication},}
+  pages     = {104--111},
+  doi       = {10.1109/ICARSC65809.2025.10970176},}
 ```
